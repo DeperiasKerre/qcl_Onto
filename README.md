@@ -2,7 +2,7 @@
 ## Introduction
 * We propose an ontological representation of the quantum cascade case laser properties.
 We use sample properties mined from scientific articles from our prevoius work [[1]](https://doi.org/10.1007/978-3-031-42941-5_34).
-* The ontological representation is based an extension of the MDO ontology [[2]] (https://doi.org/10.1007/978-3-030-62466-8_14).
+* The ontological representation is based an extension of the MDO ontology [[2]](https://doi.org/10.1007/978-3-030-62466-8_14).
 ## Citation
 TBD
 ## References
