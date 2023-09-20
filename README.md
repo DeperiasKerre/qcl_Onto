@@ -3,8 +3,11 @@
 * We propose an ontological representation of the quantum cascade case laser properties.
 We use sample properties mined from scientific articles from our prevoius work to instantiate the ontological representation in order to validate its usage[[1]](https://doi.org/10.1007/978-3-031-42941-5_34).
 * The ontological representation is based on the following base ontologies: MDO [[2]](https://doi.org/10.1007/978-3-030-62466-8_14), EMMO[[3]](https://github.com/emmorepo/410EMMO), QUDT [[4]](http://qudt.org/) and PROV-O[[5]](https://www.w3.org/TR/prov-o/%20(2013)).
-## Modules in the QCL Ontolgical Representaion
-
+## Modules in the QCL Ontolgical Representation
+** PPT Module
+** Heterostructure Module
+** Working Mode Module
+** Provenance Module
 ## Citation
 TBD
 ## References
