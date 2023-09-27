@@ -12,11 +12,6 @@ We use sample properties mined from scientific articles from our prevoius work t
 * **Optical Power:** The amount of light energy emitted or received per unit of time, often measured in watts or milliwatts.
 * **Laser Working Mode:**
 * **Laser Design Type:**
-## Modules in the QCL Ontolgical Representation
-* PPT Module
-* Heterostructure Module
-* Working Mode Module
-* Provenance Module
 ## Citation
 TBD
 ## References
