@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/"
+     xml:base="https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:emmo="http://emmo.info/domains/emmo-material.owl#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:qudt-unit="http://qudt.org/vocab/unit/">
+
+     <!--Ontology Metadata-->
+
+     <owl:Ontology rdf:about="https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/">
+          <owl:versionIRI rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/1.0"/>
+          <dcterms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anne Laurent</dcterms:contributor>
+          <dcterms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenneth Maussang</dcterms:contributor>
+          <dcterms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dickson Owuor</dcterms:contributor>
+          <dcterms:created>2023-09-27</dcterms:created>
+          <dcterms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deperias Kerre</dcterms:creator>
+          <dcterms:license>https://github.com/DeperiasKerre/qcl_Onto/blob/main/LICENSE</dcterms:license>
+          <dcterms:title xml:lang="en">An Ontological Representation of the Quantum Cascade Laser Properties</dcterms:title>
+        <vann:preferredNamespacePrefix>qclontology</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">This is an ontological representation of the quantum cascade laser properties.</rdfs:comment>
+        <rdfs:seeAlso>https://github.com/DeperiasKerre/qcl_Onto</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+     </owl:Ontology>
+
+     <!--Annotation properties-->
+
+     <!--contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!--created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!--creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!--license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!--title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!--preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!--preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+
+ 
+    <!--Datatypes-->
+
+    <!--string-->
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+    
+    <!--Integer-->
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+ 
+    <!--Double-->
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
+
+    <!--Object Properties-->
+    <!--Data Properties-->
+    <!--Classes-->
+  
+    <!--Owl Thing Class-->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing">
+         <!--rdfs:label xml:lang="en">Thing</rdfs:label-->
+         <rdfs:comment xml:lang="en">The class of OWL individuals.</rdfs:comment>
+    </owl:Class>
+
+
+
+
+</rdf:RDF>
