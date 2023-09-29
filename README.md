@@ -7,9 +7,6 @@ We use sample properties mined from scientific articles from our prevoius work t
 * **Quantum Cascade Laser:** These are semiconductor lasers that operate in the mid-to-far infrared region. They utilize efficient quantum mechanical principles to create multiple energy levels and achive efficient laser emission.
 * **Working temperature:** The temperature range within which a device or system operates effectively and reliably.
 * **Heterostructure:** A layered material composed of different semiconductor materials.
-* **Lasing frequency:** The frequency of coherent light emitted by a laser, determined by the energy levels of the laser's active medium.
-* **Barrier thickness:** Thickness of a barrier layer in a semiconductor device, which can influence the device electrical and optical characteristics.
-* **Optical Power:** The amount of light energy emitted or received per unit of time, often measured in watts or milliwatts.
 * **Laser Working Mode:**
 * **Laser Design Type:**
 ## Citation
