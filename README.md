@@ -2,7 +2,10 @@
 ## Introduction
 * We propose an ontological representation of heterostructure and optoelectronic characteristics in the quantum cascade case laser domain. The sample data utilized as a use case to valiadate the usage of the ontology was mined from scientific articles using a pipeline developed in our previous work [[1]](https://doi.org/10.1007/978-3-031-42941-5_34).
 ## Documentation
-
+#### Namespaces
+#### Classes
+#### Data Properties
+#### Object Properties
 ## Citation
 TBD
 ## References
