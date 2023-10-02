@@ -10,7 +10,7 @@
 * emmo:http://emmo.info/domains/emmo-material.owl
 * qudt:http://qudt.org/schema/qudt/
 * rdfs:http://www.w3.org/2000/01/rdf-schema
-* http://purl.org/vocab/vann/
+* vann:http://purl.org/vocab/vann/
 * dcterms:http://purl.org/dc/terms/
 * qudt-unit:http://qudt.org/vocab/unit/
 * prov:http://www.w3.org/ns/prov
