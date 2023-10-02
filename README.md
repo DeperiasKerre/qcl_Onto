@@ -6,6 +6,7 @@
 #### Classes
 #### Data Properties
 #### Object Properties
+#### Annotation Properties
 ## Citation
 TBD
 ## References
