@@ -6,13 +6,15 @@
 * owl:http://www.w3.org/2002/07/owl
 * rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns
 * xml:http://www.w3.org/XML/1998/namespace"
-* xmlns:xsd:http://www.w3.org/2001/XMLSchema
-* xmlns:emmo:http://emmo.info/domains/emmo-material.owl
-* xmlns:qudt:http://qudt.org/schema/qudt/
-* xmlns:rdfs:http://www.w3.org/2000/01/rdf-schema
-* vann:http://purl.org/vocab/vann/
+* xsd:http://www.w3.org/2001/XMLSchema
+* emmo:http://emmo.info/domains/emmo-material.owl
+* qudt:http://qudt.org/schema/qudt/
+* rdfs:http://www.w3.org/2000/01/rdf-schema
+* http://purl.org/vocab/vann/
 * dcterms:http://purl.org/dc/terms/
 * qudt-unit:http://qudt.org/vocab/unit/
+* prov:http://www.w3.org/ns/prov
+* mdo:https://liusemweb.github.io/mdo/core/1.1/index.html
 #### Classes
 #### Data Properties
 #### Object Properties
