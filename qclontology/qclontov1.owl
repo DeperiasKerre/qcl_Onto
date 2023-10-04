@@ -37,36 +37,30 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
-
     <!--created -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
     
-
 
     <!--creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
-
     <!--license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
-
 
     <!--title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
-
     <!--preferredNamespacePrefix -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
     
-
 
     <!--preferredNamespaceUri -->
 
