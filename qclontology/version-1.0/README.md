@@ -14,8 +14,8 @@
 
 
 ### Contact
-* [Deperias Kerre](dkerre@strathmore.edu)
-* [Anne Laurent](Anne.Laurent@lirmm.fr)
-* [Kenneth Maussang](Kenneth.Maussang@umontpellier.fr)
-* [Dicskosn Owuor](dowuor@strathmore.edu)
+* [Deperias Kerre](https://sces.strathmore.edu/faculty-profiles/deperias-kerre-2/)
+* [Anne Laurent](https://www.lirmm.fr/annuaire/?qq=Laurent+Anne)
+* [Kenneth Maussang](https://lab.ies.umontpellier.fr/~maussang/)https://lab.ies.umontpellier.fr/~maussang/)
+* [Dicskosn Owuor]([dowuor@strathmore.edu](https://sces.strathmore.edu/faculty-profiles/dr-owuor-dickson-2/)https://sces.strathmore.edu/faculty-profiles/dr-owuor-dickson-2/)
 
