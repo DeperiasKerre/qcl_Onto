@@ -17,5 +17,5 @@
 * [Deperias Kerre](https://sces.strathmore.edu/faculty-profiles/deperias-kerre-2/)
 * [Anne Laurent](https://www.lirmm.fr/annuaire/?qq=Laurent+Anne)
 * [Kenneth Maussang](https://lab.ies.umontpellier.fr/~maussang/)
-* [Dicskosn Owuor](https://sces.strathmore.edu/faculty-profiles/dr-owuor-dickson-2/)https://sces.strathmore.edu/faculty-profiles/dr-owuor-dickson-2/)
+* [Dicskosn Owuor](https://sces.strathmore.edu/faculty-profiles/dr-owuor-dickson-2/)
 
