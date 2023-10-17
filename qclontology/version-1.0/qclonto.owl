@@ -1,0 +1,582 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/DeperiasKerre/qcl_Onto/"
+     xml:base="https://github.com/DeperiasKerre/qcl_Onto/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:emmo="http://emmo.info/domains/emmo-material.owl#"
+     xmlns:prov="http://www.w3.org/ns/prov"
+     xmlns:qudt="http://qudt.org/schema/qudt"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:mdo-core="https://w3id.org/mdo/core/"
+     xmlns:qudt-unit="http://qudt.org/vocab/unit/">
+    <owl:Ontology rdf:about="https://github.com/DeperiasKerre/qcl_Onto/">
+        <owl:versionIRI rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/version-1.0"/>
+        <dcterms:contributor>Anne Laurent</dcterms:contributor>
+        <dcterms:contributor>Dicskson Owuor</dcterms:contributor>
+        <dcterms:contributor>Kenneth Maussang</dcterms:contributor>
+        <dcterms:created>2023-10-16</dcterms:created>
+        <dcterms:creator>Deperias Kerre</dcterms:creator>
+        <dcterms:license>https://github.com/DeperiasKerre/qcl_Onto/blob/main/LICENSE</dcterms:license>
+        <dcterms:title xml:lang="en">An Ontology of Properties in the Quantum Cascade Laser Domain</dcterms:title>
+        <vann:preferredNamespacePrefix>qclontology</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">This is an ontological representation of properties in the quantum cascade laser domain.</rdfs:comment>
+        <rdfs:seeAlso>https://github.com/DeperiasKerre/qcl_Onto</rdfs:seeAlso>
+        <owl:versionInfo>1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/QuantumCascadeLaser"/>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/ReferenceInfoAgent"/>
+        <rdfs:comment xml:lang="en">wasAttributedTo represents the relationship  quantum cascade laser device and the scientific article documenting its design and performance properties.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/basedOnMaterials -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/basedOnMaterials">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LayerSequence"/>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/Materials"/>
+        <rdfs:comment xml:lang="en">basedOnMaterials represents that the layer sequence is based on materials in the material composition of a heterostructure.</rdfs:comment>
+        <rdfs:label xml:lang="en">based on materials</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/composedOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/composedOf">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/Materials"/>
+        <rdfs:range rdf:resource="https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/#Atom"/>
+        <rdfs:comment xml:lang="en">cmposedOf represents that materials are composed of atoms.</rdfs:comment>
+        <rdfs:label xml:lang="en">composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/consistOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/consistOf">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/MaterialComposition"/>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/Materials"/>
+        <rdfs:comment xml:lang="en">consistOf represents that the material composition consist of materials</rdfs:comment>
+        <rdfs:label xml:lang="en">consist of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/correspondsToWorkingMode -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/correspondsToWorkingMode">
+        <rdfs:domain rdf:resource="https://w3id.org/mdo/core/Property"/>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserWorkingMode"/>
+        <rdfs:comment xml:lang="en">correspondsToWorkingMode represents the relationship between a property and the laser working mode under which it was obtained.</rdfs:comment>
+        <rdfs:label xml:lang="en">corresponds to working mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/hasDesignType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/hasDesignType">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserHeterostructure"/>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserDesignType"/>
+        <rdfs:comment xml:lang="en">hasDesignType indicates the relatioship between the laser heterostructure and the desgn type on whch it is based.</rdfs:comment>
+        <rdfs:label xml:lang="en">has design type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/hasHeterostructure -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/hasHeterostructure">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/QuantumCascadeLaser"/>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserHeterostructure"/>
+        <rdfs:comment xml:lang="en">has heterostructure represents the relationship between a quantum cascade laser and the heterostructural design it has.</rdfs:comment>
+        <rdfs:label xml:lang="en">has heterostructure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/hasLayerSequence -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/hasLayerSequence">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserHeterostructure"/>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LayerSequence"/>
+        <rdfs:comment xml:lang="en">hasLayerSequence indicates the relationship between a heterostructure and the layer sequence it has.</rdfs:comment>
+        <rdfs:label xml:lang="en">has layer sequence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/hasMaterialComposition -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/hasMaterialComposition">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserHeterostructure"/>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/MaterialComposition"/>
+        <rdfs:comment xml:lang="en">hasMaterialComposition indicates the relationship between the heterostructure and the materials it composes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has material composition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/hasProperty -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/hasProperty">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/QuantumCascadeLaser"/>
+        <rdfs:range rdf:resource="https://w3id.org/mdo/core/Property"/>
+        <rdfs:comment xml:lang="en">hasProperty represents the relationship between a quantum cascade laser device and the property it has.</rdfs:comment>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/hasWorkingMode -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/hasWorkingMode">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/QuantumCascadeLaser"/>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserWorkingMode"/>
+        <rdfs:comment xml:lang="en">hasWorkingMode represents the relationship between a laser device and the working mode in which it is working.</rdfs:comment>
+        <rdfs:label xml:lang="en">has working mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/relatesToMaterial -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/relatesToMaterial">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserHeterostructure"/>
+        <rdfs:range rdf:resource="http://emmo.info/domains/emmo-material.owl#Material"/>
+        <rdfs:comment xml:lang="en">relatesToMaterial refers to the relationship between the heterostructure and the material space it comes from.</rdfs:comment>
+        <rdfs:label xml:lang="en">relates to material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://qudt.org/schema/qudt#hasQuantityValue -->
+
+    <owl:ObjectProperty rdf:about="https://qudt.org/schema/qudt#hasQuantityValue">
+        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/Quantity"/>
+        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:label xml:lang="en">has quantity value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/hasQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="https://qudt.org/schema/qudt/hasQuantityKind">
+        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/Quantity"/>
+        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:label xml:lang="en">has quantity kind</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/unit -->
+
+    <owl:ObjectProperty rdf:about="https://qudt.org/schema/qudt/unit">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LayerSequence"/>
+        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/Unit"/>
+        <rdfs:comment xml:lang="en">a quanity value has a unit</rdfs:comment>
+        <rdfs:label xml:lang="en">unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/AuthorName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/AuthorName">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/ReferenceInfoAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">AuthorName represents that a referenceinfoAgent  has the author name in a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/DOI -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/DOI">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/ReferenceInfoAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">DOI represents that a referenceinfoAgent  has the DOI in a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/DesignName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/DesignName">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserDesignType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">DesignName represents that a Design type  has the name in a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/PublicationTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/PublicationTitle">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/ReferenceInfoAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">PublicationTitle represents that a referenceinfoAgent  has the publication title in a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/PublicationYear -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/PublicationYear">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/ReferenceInfoAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">PublicationYear represents that a referenceinfoAgent  has the year of publication in a an integer.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/PublisherName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/PublisherName">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/ReferenceInfoAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">PublisherName represents that a referenceingoagent  has the publishers name in a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/URL -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/URL">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/ReferenceInfoAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">URL represents that a referenceinfoAgent  has the URL  in a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/WorkingModeName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/WorkingModeName">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserWorkingMode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">WorkingModeName represents that a Laser working mode  has the name in a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/matFormula -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/matFormula">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/Materials"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">matFormula represents that materials have the fomula in a string. The formula indicates the material elemenst used and the number of atoms.</rdfs:comment>
+        <rdfs:label xml:lang="en">material formula</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/numericValue -->
+
+    <owl:DatatypeProperty rdf:about="https://qudt.org/schema/qudt/numericValue">
+        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mdo/core/PropertyName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mdo/core/PropertyName">
+        <rdfs:domain rdf:resource="https://w3id.org/mdo/core/Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">PropertyName represents that a property has the name in a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://emmo.info/domains/emmo-material.owl#Material -->
+
+    <owl:Class rdf:about="http://emmo.info/domains/emmo-material.owl#Material">
+        <rdfs:label xml:lang="en">EMMO:Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/#Atom -->
+
+    <owl:Class rdf:about="https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/#Atom">
+        <rdfs:comment xml:lang="en">A chemical entity constituting the smallest component of an element having the chemical properties of the element.</rdfs:comment>
+        <rdfs:label xml:lang="en">ChEBI:Atom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/LaserDesignType -->
+
+    <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/LaserDesignType">
+        <rdfs:comment xml:lang="en">Represents the geometrical arrangement of the materials, for instance LO-Phonon.</rdfs:comment>
+        <rdfs:label xml:lang="en">Laser Design Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/LaserHeterostructure -->
+
+    <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/LaserHeterostructure">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/hasDesignType"/>
+                        <owl:allValuesFrom rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserDesignType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/hasDesignType"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserDesignType"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A layered material composed of different semiconductor materials.</rdfs:comment>
+        <rdfs:label xml:lang="en">Laser Heterostructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/LaserWorkingMode -->
+
+    <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/LaserWorkingMode">
+        <rdfs:comment xml:lang="en">Refers to the nature in which the laser beams are emmitted i.e either continuos or in pulse mode.</rdfs:comment>
+        <rdfs:label xml:lang="en">Laser Working Mode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/LayerSequence -->
+
+    <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/LayerSequence">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/basedOnMaterials"/>
+                        <owl:allValuesFrom rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/Materials"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/basedOnMaterials"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/Materials"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Reprsents the sequence and thickness of materials composing the heterostructure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Layer Sequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/MaterialComposition -->
+
+    <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/MaterialComposition">
+        <rdfs:comment xml:lang="en">The materials composing the stack of the heterostructure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material Composition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/Materials -->
+
+    <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/Materials">
+        <rdfs:comment xml:lang="en">Materials refers to the materials contained in the laser heterostructure design</rdfs:comment>
+        <rdfs:label xml:lang="en">Materials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/QuantumCascadeLaser -->
+
+    <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/QuantumCascadeLaser">
+        <rdfs:comment xml:lang="en">Semiconductor lasers that operate in the mid to far-infrared region.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quantum Cascade Laser</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/ReferenceInfoAgent -->
+
+    <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/ReferenceInfoAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/TR/prov-o/#Agent"/>
+        <rdfs:comment xml:lang="en">A scientific article documenting the laser design and perfomance properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reference Info Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/Quantity -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/Quantity">
+        <rdfs:comment xml:lang="en">A quantity is the measurement of an observable property of a particular object, event, or physical system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/QuantityKind -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/QuantityKind">
+        <rdfs:comment xml:lang="en">A Quantity Kind is any observable property that can be measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quantity Kind</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/QuantityValue -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/QuantityValue">
+        <rdfs:label xml:lang="en">Quantity Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/Unit -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/Unit">
+        <rdfs:comment xml:lang="en">A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension).</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mdo/core/Property -->
+
+    <owl:Class rdf:about="https://w3id.org/mdo/core/Property">
+        <rdfs:subClassOf rdf:resource="https://qudt.org/schema/qudt/Quantity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/correspondsToWorkingMode"/>
+                        <owl:allValuesFrom rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserWorkingMode"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/correspondsToWorkingMode"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/LaserWorkingMode"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A property in materials design is data pertaining to at least one material or materials system, representing a quantifiable aspect of one material or materials system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/TR/prov-o/#Agent -->
+
+    <owl:Class rdf:about="https://www.w3.org/TR/prov-o/#Agent">
+        <rdfs:comment xml:lang="en">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
