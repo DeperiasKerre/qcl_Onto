@@ -1,2 +1,5 @@
-ID,Publication URL,DOI,Materials,Layer Sequence,Unit,Design Type,Working Temperature,Unit,Working Mode,Power,Unit,Frequency,Unit
-Q1,,,,,,,,,,,,,
+ID,Publication URL,DOI,Materials,Layer Sequence,Unit,Design Type,Working Temperature,Unit,WT (Pulse Mode),Unit,WT(CW),Unit,Power,Unit,Frequency,Unit
+Q1,https://doi.org/10.1063/1.2189671,10.1063/1.2189671,GaAs/Al0.15Ga0.85As,49/78/23/76/32/76/52/168,Å,LO phonon,,,110,K,95,K,,,1.9,THz
+Q2,https://doi.org/10.1364/OE.23.019689 ,10.1364/OE.23.019689 ,GaAs/Al0.15Ga0.85As,4.24/8.48/3.11/11.02/2.54/7.91/4.24/16.67,nm,Resonant-phonon ,,,144,K,,,10,mW,2.1,THz
+Q3,https://doi.org/10.1063/1.1554479,10.1063/1.1554479,GaAs/Al0.15Ga0.85As,54/78/24/64/38/148/24/94,Å,LO phonon,,,65,K,,,2.5,mW,3.44,THz
+Q4,https://doi.org/10.1063/1.3114418,10.1063/1.3114418,GaAs/Al0.15Ga0.85As,4.8/8.5/2.8/8.5/4.2/16.4,nm,Resonant-phonon,186,K,,,,,62,mW,3.9,THz
