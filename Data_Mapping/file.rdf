@@ -1,0 +1,479 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix emmo: <http://emmo.info/domains/emmo-material.owl#> .
+@prefix mdo-core: <https://w3id.org/mdo/core/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:contributor a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+prov:wasAttributedTo a owl:ObjectProperty ;
+    rdfs:comment "wasAttributedTo represents the relationship  quantum cascade laser device and the scientific article documenting its design and performance properties."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#QuantumCascadeLaser> ;
+    rdfs:range <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ReferenceInfoAgent> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> a owl:Ontology ;
+    dcterms:contributor "Anne Laurent",
+        "Dicskson Owuor",
+        "Kenneth Maussang" ;
+    dcterms:created "2023-10-16" ;
+    dcterms:creator "Deperias Kerre" ;
+    dcterms:license "https://github.com/DeperiasKerre/qcl_Onto/blob/main/LICENSE" ;
+    dcterms:title "An Ontology of Properties in the Quantum Cascade Laser Domain"@en ;
+    vann:preferredNamespacePrefix "qclontology" ;
+    vann:preferredNamespaceUri "https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/" ;
+    rdfs:comment "This is an ontological representation of properties in the quantum cascade laser domain."@en ;
+    rdfs:seeAlso "https://github.com/DeperiasKerre/qcl_Onto" ;
+    owl:versionIRI <https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/version-1.0> ;
+    owl:versionInfo "1.0" .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#AuthorName> a owl:DatatypeProperty ;
+    rdfs:comment "AuthorName represents that a referenceinfoAgent  has the author name in a string."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ReferenceInfoAgent> ;
+    rdfs:range xsd:string .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PublicationTitle> a owl:DatatypeProperty ;
+    rdfs:comment "PublicationTitle represents that a referenceinfoAgent  has the publication title in a string."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ReferenceInfoAgent> ;
+    rdfs:range xsd:string .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PublicationYear> a owl:DatatypeProperty ;
+    rdfs:comment "PublicationYear represents that a referenceinfoAgent  has the year of publication in a an integer."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ReferenceInfoAgent> ;
+    rdfs:range xsd:integer .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PublisherName> a owl:DatatypeProperty ;
+    rdfs:comment "PublisherName represents that a referenceingoagent  has the publishers name in a string."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ReferenceInfoAgent> ;
+    rdfs:range xsd:string .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#composedOf> a owl:ObjectProperty ;
+    rdfs:label "composed of"@en ;
+    rdfs:comment "cmposedOf represents that materials are composed of atoms."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#Materials> ;
+    rdfs:range <https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/#Atom> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#consistOf> a owl:ObjectProperty ;
+    rdfs:label "consist of"@en ;
+    rdfs:comment "consistOf represents that the material composition consist of materials"@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#MaterialComposition> ;
+    rdfs:range <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#Materials> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasHeterostructure> a owl:ObjectProperty ;
+    rdfs:label "has heterostructure"@en ;
+    rdfs:comment "has heterostructure represents the relationship between a quantum cascade laser and the heterostructural design it has."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#QuantumCascadeLaser> ;
+    rdfs:range <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserHeterostructure> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasLayerSequence> a owl:ObjectProperty ;
+    rdfs:label "has layer sequence"@en ;
+    rdfs:comment "hasLayerSequence indicates the relationship between a heterostructure and the layer sequence it has."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserHeterostructure> ;
+    rdfs:range <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LayerSequence> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasMaterialComposition> a owl:ObjectProperty ;
+    rdfs:label "has material composition"@en ;
+    rdfs:comment "hasMaterialComposition indicates the relationship between the heterostructure and the materials it composes."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserHeterostructure> ;
+    rdfs:range <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#MaterialComposition> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasProperty> a owl:ObjectProperty ;
+    rdfs:label "has property"@en ;
+    rdfs:comment "hasProperty represents the relationship between a quantum cascade laser device and the property it has."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#QuantumCascadeLaser> ;
+    rdfs:range mdo-core:Property .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasWorkingMode> a owl:ObjectProperty ;
+    rdfs:label "has working mode"@en ;
+    rdfs:comment "hasWorkingMode represents the relationship between a laser device and the working mode in which it is working."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#QuantumCascadeLaser> ;
+    rdfs:range <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#relatesToMaterial> a owl:ObjectProperty ;
+    rdfs:label "relates to material"@en ;
+    rdfs:comment "relatesToMaterial refers to the relationship between the heterostructure and the material space it comes from."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserHeterostructure> ;
+    rdfs:range emmo:Material .
+
+<https://qudt.org/schema/qudt#hasQuantityValue> a owl:ObjectProperty ;
+    rdfs:label "has quantity value"@en ;
+    rdfs:domain <https://qudt.org/schema/qudt/Quantity> ;
+    rdfs:range <https://qudt.org/schema/qudt/QuantityValue> .
+
+<https://qudt.org/schema/qudt/hasQuantityKind> a owl:ObjectProperty ;
+    rdfs:label "has quantity kind"@en ;
+    rdfs:domain <https://qudt.org/schema/qudt/Quantity> ;
+    rdfs:range <https://qudt.org/schema/qudt/QuantityKind> .
+
+1.9e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+2.1e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+2.5e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+2.67e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+2.83e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+3e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+3.2e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+3.3e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+3.44e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+3.9e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+3.95e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+4.7e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+9e+00 a <https://qudt.org/schema/qudt/numericValue> .
+
+1e+01 a <https://qudt.org/schema/qudt/numericValue> .
+
+3.8e+01 a <https://qudt.org/schema/qudt/numericValue> .
+
+4.5e+01 a <https://qudt.org/schema/qudt/numericValue> .
+
+6e+01 a <https://qudt.org/schema/qudt/numericValue> .
+
+6.2e+01 a <https://qudt.org/schema/qudt/numericValue> .
+
+6.5e+01 a <https://qudt.org/schema/qudt/numericValue> .
+
+8.5e+01 a <https://qudt.org/schema/qudt/numericValue> .
+
+9.5e+01 a <https://qudt.org/schema/qudt/numericValue> .
+
+1e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.05e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.1e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.38e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.42e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.44e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.5e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.51e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.78e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.86e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+1.95e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+2e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+2.105e+02 a <https://qudt.org/schema/qudt/numericValue> .
+
+"NaN"^^xsd:double a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName>,
+        <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingModeName>,
+        <https://qudt.org/schema/qudt/numericValue>,
+        <https://qudt.org/schema/qudt/unit> .
+
+"10.1063/1.1554479" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1063/1.2189671" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1063/1.2216112" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1063/1.2737129" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1063/1.3114418" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1063/1.4766915" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1063/1.4862177" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1063/1.5110305" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1088/0256-307X/30/6/064201" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1088/1367-2630/11/12/125022" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1088/1367-2630/17/2/023050" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1088/1367-2630/18/12/123004" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1364/OE.16.003242" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1364/OE.20.003866" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"10.1364/OE.23.019689 " a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> .
+
+"2.0/20.3/2.0/3.0/14.4/1.0/13.5/3.0" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"217 /43 /111 /35 /132 /20/128 /51" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"3.9/14.0/ 0.6/ 9.1/ 0.6/16.0/ 1.5/12.8/ 1.8/12.2/2.0/12.0/ 2.0/ 11.4/ 2.7/11.3/ 3.5/ 11.6" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"31/93/14/82/23/175/11/105/14/85/20/175/17/105" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"32.6/79.9/19.0/84.0/29.0/51.6" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"35/48/8/38.9/9/72/2/85.6/5/66" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"4.0/12/0.5/22.3/0.8/21.5/0.9/17.8/1/14.5/1.3/13.2?/2.2/13.4/2.8/17" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"4.24/8.48/3.11/11.02/2.54/7.91/4.24/16.67" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"4.8/8.5/2.8/8.5/4.2/16.4" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"43/89/24.6/81.5/41/160" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"49/78/23/76/32/76/52/168" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"5.1/9.3/1.0/10.5/3.3/8.7/4.2/16.5" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"5.5/11.0/1.8/11.5/3.8/9.4/4.2/18.4" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"54/78/24/64/38/148/24/94" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"9/79/25/66/41/156/33/90" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> .
+
+"Continous Wave" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingModeName> .
+
+"Frequency" a mdo-core:PropertyName .
+
+"GaAs/Al0.15Ga0.85As" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#matFormula> .
+
+"GaAs/Al0.25Ga0.75As" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#matFormula> .
+
+"GaAs/Al0.3Ga0.7As" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#matFormula> .
+
+"GaAs=Al0.25Ga0.75As" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#matFormula> .
+
+"In 0.53 Ga 0.47 As/Al 0.17In 0.52 Ga 0.31 As" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#matFormula> .
+
+"In0.53Ga0.47As/GaAs0.51Sb0.49" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#matFormula> .
+
+"K" a <https://qudt.org/schema/qudt/unit> .
+
+"LO phonon" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName> .
+
+"LO phonon" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName> .
+
+"Power" a mdo-core:PropertyName .
+
+"Pulse Mode" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingModeName> .
+
+"Resonant-Phonon" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName> .
+
+"Resonant-phonon" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName> .
+
+"Resonant-phonon " a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName> .
+
+"THz" a <https://qudt.org/schema/qudt/unit> .
+
+"WT (Pulse Mode)" a mdo-core:PropertyName .
+
+"Working Temperature CW" a mdo-core:PropertyName .
+
+"bound-to-continuum" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName> .
+
+"https://doi.org/10.1063/1.1554479" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1063/1.2189671" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1063/1.2216112" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1063/1.2737129" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1063/1.3114418" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1063/1.4766915" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1063/1.4862177" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1063/1.5110305" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1088/0256-307X/30/6/064201" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1088/1367-2630/11/12/125022" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1088/1367-2630/17/2/023050" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1088/1367-2630/18/12/123004" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1364/OE.16.003242" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1364/OE.20.003866" a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"https://doi.org/10.1364/OE.23.019689 " a <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> .
+
+"mW" a <https://qudt.org/schema/qudt/unit> .
+
+"nm" a <https://qudt.org/schema/qudt/unit> .
+
+"Å" a <https://qudt.org/schema/qudt/unit> .
+
+emmo:Material a owl:Class ;
+    rdfs:label "EMMO:Material"@en .
+
+<https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/#Atom> a owl:Class ;
+    rdfs:label "ChEBI:Atom"@en ;
+    rdfs:comment "A chemical entity constituting the smallest component of an element having the chemical properties of the element."@en .
+
+<https://qudt.org/schema/qudt/QuantityKind> a owl:Class ;
+    rdfs:label "Quantity Kind"@en ;
+    rdfs:comment "A Quantity Kind is any observable property that can be measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc."@en .
+
+<https://qudt.org/schema/qudt/Unit> a owl:Class ;
+    rdfs:label "Unit"@en ;
+    rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension)."@en .
+
+<https://www.w3.org/TR/prov-o/#Agent> a owl:Class ;
+    rdfs:comment "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."@en .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#MaterialComposition> a owl:Class ;
+    rdfs:label "Material Composition"@en ;
+    rdfs:comment "The materials composing the stack of the heterostructure."@en .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#basedOnMaterials> a owl:ObjectProperty ;
+    rdfs:label "based on materials"@en ;
+    rdfs:comment "basedOnMaterials represents that the layer sequence is based on materials in the material composition of a heterostructure."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LayerSequence> ;
+    rdfs:range <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#Materials> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#correspondsToWorkingMode> a owl:ObjectProperty ;
+    rdfs:label "corresponds to working mode"@en ;
+    rdfs:comment "correspondsToWorkingMode represents the relationship between a property and the laser working mode under which it was obtained."@en ;
+    rdfs:domain mdo-core:Property ;
+    rdfs:range <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasDesignType> a owl:ObjectProperty ;
+    rdfs:label "has design type"@en ;
+    rdfs:comment "hasDesignType indicates the relatioship between the laser heterostructure and the desgn type on whch it is based."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserHeterostructure> ;
+    rdfs:range <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingModeName> a owl:DatatypeProperty ;
+    rdfs:comment "WorkingModeName represents that a Laser working mode  has the name in a string."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode> ;
+    rdfs:range xsd:string .
+
+<https://qudt.org/schema/qudt/Quantity> a owl:Class ;
+    rdfs:comment "A quantity is the measurement of an observable property of a particular object, event, or physical system."@en .
+
+<https://qudt.org/schema/qudt/QuantityValue> a owl:Class ;
+    rdfs:label "Quantity Value"@en .
+
+mdo-core:Property a owl:Class ;
+    rdfs:label "Property"@en ;
+    rdfs:comment "A property in materials design is data pertaining to at least one material or materials system, representing a quantifiable aspect of one material or materials system."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode> ;
+                        owl:onProperty <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#correspondsToWorkingMode> ] [ a owl:Restriction ;
+                        owl:onClass <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode> ;
+                        owl:onProperty <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#correspondsToWorkingMode> ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        <https://qudt.org/schema/qudt/Quantity> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType> a owl:Class ;
+    rdfs:label "Laser Design Type"@en ;
+    rdfs:comment "Represents the geometrical arrangement of the materials, for instance LO-Phonon."@en .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LayerSequence> a owl:Class ;
+    rdfs:label "Layer Sequence"@en ;
+    rdfs:comment "Reprsents the sequence and thickness of materials composing the heterostructure."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#Materials> ;
+                        owl:onProperty <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#basedOnMaterials> ] [ a owl:Restriction ;
+                        owl:onClass <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#Materials> ;
+                        owl:onProperty <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#basedOnMaterials> ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#QuantumCascadeLaser> a owl:Class ;
+    rdfs:label "Quantum Cascade Laser"@en ;
+    rdfs:comment "Semiconductor lasers that operate in the mid to far-infrared region."@en .
+
+mdo-core:PropertyName a owl:DatatypeProperty ;
+    rdfs:comment "PropertyName represents that a property has the name in a string."@en ;
+    rdfs:domain mdo-core:Property ;
+    rdfs:range xsd:string .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserHeterostructure> a owl:Class ;
+    rdfs:label "Laser Heterostructure"@en ;
+    rdfs:comment "A layered material composed of different semiconductor materials."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType> ;
+                        owl:onProperty <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasDesignType> ] [ a owl:Restriction ;
+                        owl:onClass <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType> ;
+                        owl:onProperty <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasDesignType> ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode> a owl:Class ;
+    rdfs:label "Laser Working Mode"@en ;
+    rdfs:comment "Refers to the nature in which the laser beams are emmitted i.e either continuos or in pulse mode."@en .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#Materials> a owl:Class ;
+    rdfs:label "Materials"@en ;
+    rdfs:comment "Materials refers to the materials contained in the laser heterostructure design"@en .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#matFormula> a owl:DatatypeProperty ;
+    rdfs:label "material formula"@en ;
+    rdfs:comment "matFormula represents that materials have the fomula in a string. The formula indicates the material elemenst used and the number of atoms."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#Materials> ;
+    rdfs:range xsd:string .
+
+<https://qudt.org/schema/qudt/unit> a owl:ObjectProperty ;
+    rdfs:label "unit"@en ;
+    rdfs:comment "a quanity value has a unit"@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LayerSequence>,
+        <https://qudt.org/schema/qudt/QuantityValue> ;
+    rdfs:range <https://qudt.org/schema/qudt/Unit> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName> a owl:DatatypeProperty ;
+    rdfs:comment "DesignName represents that a Design type  has the name in a string."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType> ;
+    rdfs:range xsd:string .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ReferenceInfoAgent> a owl:Class ;
+    rdfs:label "Reference Info Agent"@en ;
+    rdfs:comment "A scientific article documenting the laser design and perfomance properties."@en ;
+    rdfs:subClassOf <https://www.w3.org/TR/prov-o/#Agent> .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DOI> a owl:DatatypeProperty ;
+    rdfs:comment "DOI represents that a referenceinfoAgent  has the DOI in a string."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ReferenceInfoAgent> ;
+    rdfs:range xsd:string .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL> a owl:DatatypeProperty ;
+    rdfs:comment "URL represents that a referenceinfoAgent  has the URL  in a string."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ReferenceInfoAgent> ;
+    rdfs:range xsd:string .
+
+<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#sequence> a owl:DatatypeProperty ;
+    rdfs:comment "sequence represents that a layer sequence has a sequence in a string."@en ;
+    rdfs:domain <https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LayerSequence> ;
+    rdfs:range xsd:string .
+
+<https://qudt.org/schema/qudt/numericValue> a owl:DatatypeProperty ;
+    rdfs:domain <https://qudt.org/schema/qudt/QuantityValue> ;
+    rdfs:range xsd:double .
+
