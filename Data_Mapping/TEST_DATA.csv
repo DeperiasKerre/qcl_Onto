@@ -1,4 +1,4 @@
-﻿ID,Publication URL,DOI,Materials,Layer Sequence,LSUnit,Design Type,Working Temperature CW,WTCWUnit,Working Mode CW,WT (Pulse Mode),WTPMUnit,Working Mode PM ,Power,PowerUnit,Frequency,FrequencyUnit
+﻿ID,Publication URL,DOI,Materials,Layer Sequence,LSUnit,Design Type,Working Temperature CW,WTCWUnit,Working Mode CW,WT (Pulse Mode),WTPMUnit,WorkingModepm,Power,PowerUnit,Frequency,FrequencyUnit
 Q1,https://doi.org/10.1063/1.2189671,10.1063/1.2189671,GaAs/Al0.15Ga0.85As,49/78/23/76/32/76/52/168,Å,LO phonon,95,K,Continous Wave,110,K,Pulse Mode,,,1.9,THz
 Q2,https://doi.org/10.1364/OE.23.019689 ,10.1364/OE.23.019689 ,GaAs/Al0.15Ga0.85As,4.24/8.48/3.11/11.02/2.54/7.91/4.24/16.67,nm,Resonant-phonon ,,,,144,K,Pulse Mode,10,mW,2.1,THz
 Q3,https://doi.org/10.1063/1.1554479,10.1063/1.1554479,GaAs/Al0.15Ga0.85As,54/78/24/64/38/148/24/94,Å,LO phonon,,,,65,K,Pulse Mode,2.5,mW,3.44,THz
@@ -11,7 +11,6 @@ Q9,https://doi.org/10.1063/1.4766915,10.1063/1.4766915,In0.53Ga0.47As/GaAs0.51Sb
 Q10,https://doi.org/10.1088/1367-2630/17/2/023050,10.1088/1367-2630/17/2/023050,In 0.53 Ga 0.47 As/Al 0.17In 0.52 Ga 0.31 As,217 /43 /111 /35 /132 /20/128 /51,Å,bound-to-continuum,195,K,Continous Wave,,,,,,,
 Q11,https://doi.org/10.1364/OE.20.003866,10.1364/OE.20.003866,GaAs/Al0.15Ga0.85As,43/89/24.6/81.5/41/160,Å,LO phonon,200,K,Continous Wave,,,,38,mW,3.2,THz
 Q12,https://doi.org/10.1364/OE.16.003242,10.1364/OE.16.003242,GaAs/Al0.15Ga0.85As,9/79/25/66/41/156/33/90,Å,Resonant-Phonon,178,K,Continous Wave,,,,,,3,THz
-Q13,https://doi.org/10.1063/1.2737129,10.1063/1.2737129,GaAs/Al0.15Ga0.85As,"3.9/14.0/ 0.6/ 9.1/ 0.6/16.0/ 1.5/12.8/ 1.8/12.2/
-2.0/12.0/ 2.0/ 11.4/ 2.7/11.3/ 3.5/ 11.6.",nm,,45,K,Continous Wave,,,,100,mW,2.83,THz
+Q13,https://doi.org/10.1063/1.2737129,10.1063/1.2737129,GaAs/Al0.15Ga0.85As,3.9/14.0/ 0.6/ 9.1/ 0.6/16.0/ 1.5/12.8/ 1.8/12.2/2.0/12.0/ 2.0/ 11.4/ 2.7/11.3/ 3.5/ 11.6,nm,,45,K,Continous Wave,,,,100,mW,2.83,THz
 Q14,https://doi.org/10.1063/1.2216112,10.1063/1.2216112,GaAs/Al0.3Ga0.7As,31/93/14/82/23/175/11/105/14/85/20/175/17/105,Å,LO phonon,105,K,Continous Wave,138,K,Pulse Mode,,,,
 Q15,https://doi.org/10.1063/1.5110305,10.1063/1.5110305,GaAs/Al0.25Ga0.75As,32.6/79.9/19.0/84.0/29.0/51.6,Å,,210.5,K,Continous Wave,,,,200,mW,3.95,THz
