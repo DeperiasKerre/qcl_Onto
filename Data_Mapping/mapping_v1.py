@@ -1,38 +1,22 @@
-#!/usr/bin/env python
-# coding: utf-8
+# -*- coding: utf-8 -*-
+"""
+Created on Tues Oct 24 16:23:24 2023
 
-# In[35]:
-
-
+@author: Deperias Kerre
+"""
 #libraries
 from rdflib import Graph, Literal, RDF, RDFS, URIRef
 import pandas as pd
 
-
-# In[36]:
-
-
 #import csv dataset
 df=pd.read_csv("D:\ACADEMICS\PhD Computer Science\Research Work\QCL Project\QCL Ontology\TEST DATA\Data Analysis Trials\TEST_DATA.csv")
-
-
-# In[37]:
-
 
 #view a section of data
 df.head()
 
-
-# In[38]:
-
-
 #create a graph and parse the ontology
 g=Graph()
 g.parse("D:\ACADEMICS\PhD Computer Science\Research Work\QCL Project\QCL Ontology\TEST DATA\Data Analysis Trials\qclonto.owl")
-
-
-# In[39]:
-
 
 #parsing each column data into a python list
 print("Parsing data columns to lists...")
@@ -54,27 +38,15 @@ frequency_list=df["Frequency"].tolist()
 frequencyunit_list=df["FrequencyUnit"].tolist()
 print("Successfully parsed to lists.")
 
-
-# In[26]:
-
-
 #just to verify the content of the list
 #for i in materials_list:
     #print(i)
-
-
-# In[27]:
-
-
+    
 #property names
 working_tempcw="Working Temperature CW"
 working_temppm="WT (Pulse Mode)"
 power="Power"
 frequency="Frequency"
-
-
-# In[28]:
-
 
 #declaring the URis for instantiation
 url=URIRef("https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#URL")
@@ -86,10 +58,6 @@ designname=URIRef("https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontolo
 values=URIRef("https://qudt.org/schema/qudt/numericValue")
 workingmodename=URIRef("https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingModeName")
 propertyname=URIRef("https://w3id.org/mdo/core/PropertyName")
-
-
-# In[29]:
-
 
 #mapping the lists as instances of the URIs
 #URL
@@ -142,10 +110,6 @@ for i in range(len(frequencyunit_list)):
     g.add((Literal(frequencyunit_list[i]), RDF.type, units))
 print("Mapping Succesful...")
 
-
-# In[30]:
-
-
 #mapping the property names
 g.add((Literal(working_tempcw), RDF.type, propertyname))
 g.add((Literal(working_temppm), RDF.type, propertyname))
@@ -153,25 +117,8 @@ g.add((Literal(power), RDF.type, propertyname))
 g.add((Literal(frequency), RDF.type, propertyname))
 print("Mapping Succesful...")
 
-
-# In[31]:
-
-
-#we verify this
-for s,p,o in g:
-    if('PropertyName'in o):
-        print(s,p,o)
+#serialize into an rdf file in the current directory
+g.serialize(destination="file.rdf")
 
 
-# In[33]:
-
-
-#serializeinto an rdf file
-#g.serialize(destination="file.rdf")
-
-
-# In[34]:
-
-
-#Mapping at instance level
 
