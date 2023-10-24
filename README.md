@@ -5,7 +5,10 @@
 The documentation of the ontology can be found at this URL: TBD
 ## Publication
 TBD
-## Citation
-TBD
+## License
+This work is licensed under a [Creative Commons Attribution 4.0 International
+License](http://creativecommons.org/licenses/by/4.0/).
+
+[![CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 ## References
 1. Kerre, D., Laurent, A., Maussang, K., & Owuor, D. (2023, August). A text mining pipeline for mining the quantum cascade laser properties. In European Conference on Advances in Databases and Information Systems (pp. 393-406). Cham: Springer Nature Switzerland.
