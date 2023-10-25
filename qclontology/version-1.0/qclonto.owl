@@ -91,7 +91,6 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
     
 
 
@@ -123,17 +122,6 @@
         <rdfs:range rdf:resource="https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/#Atom"/>
         <rdfs:comment xml:lang="en">cmposedOf represents that materials are composed of atoms.</rdfs:comment>
         <rdfs:label xml:lang="en">composed of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#consistOf -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#consistOf">
-        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#MaterialComposition"/>
-        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#Materials"/>
-        <rdfs:comment xml:lang="en">consistOf represents that the material composition consist of materials</rdfs:comment>
-        <rdfs:label xml:lang="en">consist of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -182,13 +170,13 @@
     
 
 
-    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasMaterialComposition -->
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasMaterials -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasMaterialComposition">
+    <owl:ObjectProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#hasMaterials">
         <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserHeterostructure"/>
-        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#MaterialComposition"/>
-        <rdfs:comment xml:lang="en">hasMaterialComposition indicates the relationship between the heterostructure and the materials it composes.</rdfs:comment>
-        <rdfs:label xml:lang="en">has material composition</rdfs:label>
+        <rdfs:range rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#Materials"/>
+        <rdfs:comment xml:lang="en">hasMaterials represents that a heterostructure has materials that form the heterostructure layer.</rdfs:comment>
+        <rdfs:label xml:lang="en">has materials</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -370,6 +358,16 @@
     
 
 
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#unitSymbol -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#unitSymbol">
+        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/Unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">unitSymbol asserts that a unit has unit symbol in a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://qudt.org/schema/qudt/numericValue -->
 
     <owl:DatatypeProperty rdf:about="https://qudt.org/schema/qudt/numericValue">
@@ -479,15 +477,6 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Reprsents the sequence and thickness of materials composing the heterostructure.</rdfs:comment>
         <rdfs:label xml:lang="en">Layer Sequence</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#MaterialComposition -->
-
-    <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#MaterialComposition">
-        <rdfs:comment xml:lang="en">The materials composing the stack of the heterostructure.</rdfs:comment>
-        <rdfs:label xml:lang="en">Material Composition</rdfs:label>
     </owl:Class>
     
 
