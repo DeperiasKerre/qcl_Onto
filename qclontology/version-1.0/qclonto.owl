@@ -372,7 +372,7 @@
 
     <owl:DatatypeProperty rdf:about="https://qudt.org/schema/qudt/numericValue">
         <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -413,6 +413,12 @@
         <rdfs:comment xml:lang="en">A scholarly academic article, typically published in a journal.</rdfs:comment>
         <rdfs:label xml:lang="en">Academic Article</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://dcmi.github.io/bibo/ -->
+
+    <owl:Class rdf:about="https://dcmi.github.io/bibo/"/>
     
 
 
