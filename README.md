@@ -5,7 +5,7 @@
 ### Ontology Concepts and Relationships 
 ![entities](Figures/ontology_v1.png "Ontology Concepts and Relationships")
 ### Documentation
-The documentation of the ontology can be found at this URL: TBD
+The documentation of the ontology can be found at this URL: in progress
 ### Publication
 TBD
 ### License
