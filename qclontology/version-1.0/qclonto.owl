@@ -396,7 +396,7 @@
     <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType -->
 
     <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType">
-        <rdfs:comment xml:lang="en">Represents the geometrical arrangement of the materials, for instance LO-Phonon.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents the geometrical aspects of the laser design.</rdfs:comment>
         <rdfs:label xml:lang="en">Laser Design Type</rdfs:label>
     </owl:Class>
     
@@ -535,6 +535,7 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#BoundToContinum">
         <rdf:type rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType"/>
+        <rdfs:comment xml:lang="en">A laser design where the sequence of material in the active region is made with more or less increasing width of layers in the multistack of material.</rdfs:comment>
         <rdfs:label xml:lang="en">bound to continum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -554,7 +555,7 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DoubleResonantPhonon">
         <rdf:type rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType"/>
-        <rdfs:comment xml:lang="en">A double resonant phonon design refers to...</rdfs:comment>
+        <rdfs:comment xml:lang="en">A laser design where two quantum well are resonant.</rdfs:comment>
         <rdfs:label xml:lang="en">double resonant phonon</rdfs:label>
     </owl:NamedIndividual>
     
@@ -573,6 +574,7 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LOPhononDepopulation">
         <rdf:type rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType"/>
+        <rdfs:comment xml:lang="en">LO Phonon depopulation refers to the laser design where the sequence of material in the active region is designed to provide laser effect from longitudinal Optical Phonons.</rdfs:comment>
         <rdfs:label xml:lang="en">LO Phonon Depopulation</rdfs:label>
     </owl:NamedIndividual>
     
