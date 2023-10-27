@@ -99,7 +99,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo">
         <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#QuantumCascadeLaser"/>
-        <rdfs:range rdf:resource="https://dcmi.github.io/bibo/"/>
         <rdfs:comment xml:lang="en">wasAttributedTo represents the relationship  quantum cascade laser device and the scientific article documenting its design and performance properties.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -327,16 +326,6 @@
     
 
 
-    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingModeName -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingModeName">
-        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">WorkingModeName represents that a Laser working mode  has the name in a string.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#matFormula -->
 
     <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#matFormula">
@@ -358,31 +347,11 @@
     
 
 
-    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#unitSymbol -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#unitSymbol">
-        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/Unit"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">unitSymbol asserts that a unit has unit symbol in a string.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://qudt.org/schema/qudt/numericValue -->
 
     <owl:DatatypeProperty rdf:about="https://qudt.org/schema/qudt/numericValue">
         <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/mdo/core/PropertyName -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/mdo/core/PropertyName">
-        <rdfs:domain rdf:resource="https://w3id.org/mdo/core/Property"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">PropertyName represents that a property has the name in a string.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -413,12 +382,6 @@
         <rdfs:comment xml:lang="en">A scholarly academic article, typically published in a journal.</rdfs:comment>
         <rdfs:label xml:lang="en">Academic Article</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- https://dcmi.github.io/bibo/ -->
-
-    <owl:Class rdf:about="https://dcmi.github.io/bibo/"/>
     
 
 
@@ -476,7 +439,7 @@
     <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode -->
 
     <owl:Class rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode">
-        <rdfs:comment xml:lang="en">Refers to the nature in which the laser beams are emmitted i.e either continuos or in pulse mode.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Refers to the nature in which the laser beams are emmitted.</rdfs:comment>
         <rdfs:label xml:lang="en">Laser Working Mode</rdfs:label>
     </owl:Class>
     
@@ -564,6 +527,122 @@
     <owl:Class rdf:about="https://www.w3.org/TR/prov-o/#Agent">
         <rdfs:comment xml:lang="en">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#BoundToContinum -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#BoundToContinum">
+        <rdf:type rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType"/>
+        <rdfs:label xml:lang="en">bound to continum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ContinousWaveOperation -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#ContinousWaveOperation">
+        <rdf:type rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode"/>
+        <rdfs:comment xml:lang="en">Continous Wave Operation refers to the laser operation mode in which laser beams are emitted continously.</rdfs:comment>
+        <rdfs:label xml:lang="en">continous wave operation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DoubleResonantPhonon -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DoubleResonantPhonon">
+        <rdf:type rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType"/>
+        <rdfs:comment xml:lang="en">A double resonant phonon design refers to...</rdfs:comment>
+        <rdfs:label xml:lang="en">double resonant phonon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#FrequencyValue -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#FrequencyValue">
+        <rdfs:comment xml:lang="en">Frequency Value refers to the quantity value of the laser lasing frequency.</rdfs:comment>
+        <rdfs:label xml:lang="en">lasing frequency value</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LOPhononDepopulation -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LOPhononDepopulation">
+        <rdf:type rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType"/>
+        <rdfs:label xml:lang="en">LO Phonon Depopulation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LasingFrequency -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LasingFrequency">
+        <rdf:type rdf:resource="https://w3id.org/mdo/core/Property"/>
+        <rdfs:comment xml:lang="en">LasingFrequency refers to the frequency at which the quantum cascade lasers emits the laser beams.</rdfs:comment>
+        <rdfs:label xml:lang="en">lasing frequency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#OpticalPower -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#OpticalPower">
+        <rdf:type rdf:resource="https://w3id.org/mdo/core/Property"/>
+        <rdfs:comment xml:lang="en">OpticalPower refers to the laser output power.</rdfs:comment>
+        <rdfs:label xml:lang="en">optical power</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PowerValue -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PowerValue">
+        <rdfs:comment xml:lang="en">PowerValue refers to the quanity value of the laser optical power.</rdfs:comment>
+        <rdfs:label xml:lang="en">power value</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PulsedOperation -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PulsedOperation">
+        <rdf:type rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserWorkingMode"/>
+        <rdfs:comment xml:lang="en">Pulse operation  refers to the laser operation mode in which laser beams are emitted in pulses.</rdfs:comment>
+        <rdfs:label xml:lang="en">pulsed operation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingTempValue -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingTempValue">
+        <rdfs:comment xml:lang="en">WorkingTempValue refers to the quantity value of the laser working/operation temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">working temperature value</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingTemperature -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingTemperature">
+        <rdf:type rdf:resource="https://w3id.org/mdo/core/Property"/>
+        <rdfs:comment xml:lang="en">WorkingTemperature refers to the operation temperature under which the quantum cascade laser emmits the laser beams.</rdfs:comment>
+        <rdfs:label xml:lang="en">working temperature</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
