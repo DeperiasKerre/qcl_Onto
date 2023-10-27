@@ -276,16 +276,6 @@
     
 
 
-    <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#DesignName">
-        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LaserDesignType"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">DesignName represents that a Design type  has the name in a string.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PublicationTitle -->
 
     <owl:DatatypeProperty rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PublicationTitle">
