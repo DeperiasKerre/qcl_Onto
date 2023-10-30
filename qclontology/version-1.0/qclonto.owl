@@ -564,6 +564,7 @@
     <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#FrequencyValue -->
 
     <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#FrequencyValue">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="en">Frequency Value refers to the quantity value of the laser lasing frequency.</rdfs:comment>
         <rdfs:label xml:lang="en">lasing frequency value</rdfs:label>
     </owl:NamedIndividual>
@@ -603,6 +604,7 @@
     <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PowerValue -->
 
     <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#PowerValue">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="en">PowerValue refers to the quanity value of the laser optical power.</rdfs:comment>
         <rdfs:label xml:lang="en">power value</rdfs:label>
     </owl:NamedIndividual>
@@ -622,6 +624,7 @@
     <!-- https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingTempValue -->
 
     <owl:NamedIndividual rdf:about="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#WorkingTempValue">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="en">WorkingTempValue refers to the quantity value of the laser working/operation temperature.</rdfs:comment>
         <rdfs:label xml:lang="en">working temperature value</rdfs:label>
     </owl:NamedIndividual>
