@@ -22,7 +22,7 @@
         <dcterms:creator>Deperias Kerre</dcterms:creator>
         <dcterms:license>https://github.com/DeperiasKerre/qcl_Onto/blob/main/LICENSE</dcterms:license>
         <dcterms:title xml:lang="en">An Ontology of Properties in the Quantum Cascade Laser Domain</dcterms:title>
-        <vann:preferredNamespacePrefix xml:lang="en">qpOnto</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix xml:lang="en">QpOnto</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://github.com/DeperiasKerre/qcl_Onto/tree/main/qclontology/</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This is an ontological representation of properties in the quantum cascade laser domain.</rdfs:comment>
         <rdfs:seeAlso>https://github.com/DeperiasKerre/qcl_Onto</rdfs:seeAlso>
