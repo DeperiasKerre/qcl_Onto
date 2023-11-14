@@ -95,6 +95,17 @@
     
 
 
+    <!-- http://qudt.org/schema/qudt/hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasUnit">
+        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LayerSequence"/>
+        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment xml:lang="en">hasUnit represents that a quantity value has a unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo">
@@ -229,18 +240,6 @@
         <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/Quantity"/>
         <rdfs:range rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
         <rdfs:label xml:lang="en">has quantity kind</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://qudt.org/schema/qudt/unit -->
-
-    <owl:ObjectProperty rdf:about="https://qudt.org/schema/qudt/unit">
-        <rdfs:domain rdf:resource="https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#LayerSequence"/>
-        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
-        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/Unit"/>
-        <rdfs:comment xml:lang="en">a quanity value has a unit</rdfs:comment>
-        <rdfs:label xml:lang="en">unit</rdfs:label>
     </owl:ObjectProperty>
     
 
