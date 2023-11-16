@@ -1,16 +1,16 @@
 ﻿QID,PublicationURL,DOI,HSID,MatID,Materials,LSID,LayerSequence,LSUnit,DesignType,WorkingTemperatureCW,WTCWUnit,WorkingModeCW,WTPulseMode,WTPMUnit,WorkingModepm,Power,PowerUnit,Frequency,FrequencyUnit
-QCL1,https://www.doi.org/10.1063/1.2189671,10.1063/1.2189671,HS1,M1,GaAs/Al0.15Ga0.85As,LS1,49/78/23/76/32/76/52/168,Å,LOphonon,95,K,Continous Wave,110,K,Pulse Mode,,,1.9,THz
-QCL2,https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-15-19689&id=323020,10.1364/OE.23.019689 ,HS2,M2,GaAs/Al0.15Ga0.85As,LS2,4.24/8.48/3.11/11.02/2.54/7.91/4.24/16.67,nm,Resonantphonon ,,,,144,K,Pulse Mode,10,mW,2.1,THz
-QCL3,https://www.doi.org/10.1063/1.1554479,10.1063/1.1554479,HS3,M3,GaAs/Al0.15Ga0.85As,LS3,54/78/24/64/38/148/24/94,Å,LOphonon,,,,65,K,Pulse Mode,2.5,mW,3.44,THz
-QCL4,https://www.doi.org/10.1063/1.3114418,10.1063/1.3114418,HS4,M4,GaAs/Al0.15Ga0.85As,LS4,4.8/8.5/2.8/8.5/4.2/16.4,nm,Resonantphonon,186,K,Continous Wave,,,,62,mW,3.9,THz
-QCL5,https://www.doi.org/10.1063/1.4862177,10.1063/1.4862177,HS5,M5,GaAs=Al0.25Ga0.75As,LS5,35/48/8/38.9/9/72/2/85.6/5/66,Å,LOphonon,151,K,Continous Wave,,,,,,2.67,THz
-QCL6,https://www.doi.org/10.1088/1367-2630/11/12/125022,10.1088/1367-2630/11/12/125022,HS6,M6,GaAs/Al0.15Ga0.85As,LS6,5.5/11.0/1.8/11.5/3.8/9.4/4.2/18.4,nm,boundtocontinum,100,K,Continous Wave,,,,,,3,THz
+QCL1,https://www.doi.org/10.1063/1.2189671,10.1063/1.2189671,HS1,M1,GaAs/Al0.15Ga0.85As,LS1,49/78/23/76/32/76/52/168,Å,LOphonon,95,K,Continous Wave,110,K,Pulse Mode,none,,1.9,THz
+QCL2,https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-15-19689&id=323020,10.1364/OE.23.019689 ,HS2,M2,GaAs/Al0.15Ga0.85As,LS2,4.24/8.48/3.11/11.02/2.54/7.91/4.24/16.67,nm,Resonantphonon,none,,,144,K,Pulse Mode,10,mW,2.1,THz
+QCL3,https://www.doi.org/10.1063/1.1554479,10.1063/1.1554479,HS3,M3,GaAs/Al0.15Ga0.85As,LS3,54/78/24/64/38/148/24/94,Å,LOphonon,none,,,65,K,Pulse Mode,2.5,mW,3.44,THz
+QCL4,https://www.doi.org/10.1063/1.3114418,10.1063/1.3114418,HS4,M4,GaAs/Al0.15Ga0.85As,LS4,4.8/8.5/2.8/8.5/4.2/16.4,nm,Resonantphonon,186,K,Continous Wave,none,,,62,mW,3.9,THz
+QCL5,https://www.doi.org/10.1063/1.4862177,10.1063/1.4862177,HS5,M5,GaAs/Al0.25Ga0.75As,LS5,35/48/8/38.9/9/72/2/85.6/5/66,Å,LOphonon,151,K,Continous Wave,none,,,none,,2.67,THz
+QCL6,https://www.doi.org/10.1088/1367-2630/11/12/125022,10.1088/1367-2630/11/12/125022,HS6,M6,GaAs/Al0.15Ga0.85As,LS6,5.5/11.0/1.8/11.5/3.8/9.4/4.2/18.4,nm,boundtocontinum,100,K,Continous Wave,none,,,none,,3,THz
 QCL7,https://www.doi.org/10.1088/0256-307X/30/6/064201,10.1088/0256-307X/30/6/064201,HS7,M7,GaAs/Al0.15Ga0.85As,LS7,4.0/12/0.5/22.3/0.8/21.5/0.9/17.8/1/14.5/1.3/13.2?/2.2/13.4/2.8/17,nm,boundtocontinum,60,K,Continous Wave,85,K,Pulse Mode,62,mW,3.2,THz
-QCL8,https://www.doi.org/10.1088/1367-2630/18/12/123004,10.1088/1367-2630/18/12/123004,HS8,M8,GaAs/Al0.15Ga0.85As,LS8,5.1/9.3/1.0/10.5/3.3/8.7/4.2/16.5,nm,LOphonon,150,K,Continous Wave,,,,200,mW,4.7,THz
-QCL9,https://www.doi.org/10.1063/1.4766915,10.1063/1.4766915,HS9,M9,In0.53Ga0.47As/GaAs0.51Sb0.49,LS9,2.0/20.3/2.0/3.0/14.4/1.0/13.5/3.0,nm,LOphonon,142,K,Continous Wave,,,,9,mW,3.3,THz
-QCL10,https://www.doi.org/10.1088/1367-2630/17/2/023050,10.1088/1367-2630/17/2/023050,HS10,M10,In 0.53 Ga 0.47 As/Al 0.17In 0.52 Ga 0.31 As,LS10,217 /43 /111 /35 /132 /20/128 /51,Å,boundtocontinum,195,K,Continous Wave,,,,,,,
-QCL11,https://www.doi.org/10.1364/OE.20.003866,10.1364/OE.20.003866,HS11,M11,GaAs/Al0.15Ga0.85As,LS11,43/89/24.6/81.5/41/160,Å,LOphonon,200,K,Continous Wave,,,,38,mW,3.2,THz
-QCL12,https://www.doi.org/10.1364/OE.16.003242,10.1364/OE.16.003242,HS12,M12,GaAs/Al0.15Ga0.85As,LS12,9/79/25/66/41/156/33/90,Å,ResonantPhonon,178,K,Continous Wave,,,,,,3,THz
-QCL13,https://www.doi.org/10.1063/1.2737129,10.1063/1.2737129,HS13,M13,GaAs/Al0.15Ga0.85As,LS13,3.9/14.0/ 0.6/ 9.1/ 0.6/16.0/ 1.5/12.8/ 1.8/12.2/2.0/12.0/ 2.0/ 11.4/ 2.7/11.3/ 3.5/ 11.6,nm,none,45,K,Continous Wave,,,,100,mW,2.83,THz
-QCL14,https://www.doi.org/10.1063/1.2216112,10.1063/1.2216112,HS14,M14,GaAs/Al0.3Ga0.7As,LS14,31/93/14/82/23/175/11/105/14/85/20/175/17/105,Å,LOphonon,105,K,Continous Wave,138,K,Pulse Mode,,,,
-QCL15,https://www.doi.org/10.1063/1.5110305,10.1063/1.5110305,HS15,M15,GaAs/Al0.25Ga0.75As,LS15,32.6/79.9/19.0/84.0/29.0/51.6,Å,none,210.5,K,Continous Wave,,,,200,mW,3.95,THz
+QCL8,https://www.doi.org/10.1088/1367-2630/18/12/123004,10.1088/1367-2630/18/12/123004,HS8,M8,GaAs/Al0.15Ga0.85As,LS8,5.1/9.3/1.0/10.5/3.3/8.7/4.2/16.5,nm,LOphonon,150,K,Continous Wave,none,,,200,mW,4.7,THz
+QCL9,https://www.doi.org/10.1063/1.4766915,10.1063/1.4766915,HS9,M9,In0.53Ga0.47As/GaAs0.51Sb0.49,LS9,2.0/20.3/2.0/3.0/14.4/1.0/13.5/3.0,nm,LOphonon,142,K,Continous Wave,none,,,9,mW,3.3,THz
+QCL10,https://www.doi.org/10.1088/1367-2630/17/2/023050,10.1088/1367-2630/17/2/023050,HS10,M10,In 0.53 Ga 0.47 As/Al 0.17In 0.52 Ga 0.31 As,LS10,217 /43 /111 /35 /132 /20/128 /51,Å,boundtocontinum,195,K,Continous Wave,none,,,none,,none,
+QCL11,https://www.doi.org/10.1364/OE.20.003866,10.1364/OE.20.003866,HS11,M11,GaAs/Al0.15Ga0.85As,LS11,43/89/24.6/81.5/41/160,Å,LOphonon,200,K,Continous Wave,none,,,38,mW,3.2,THz
+QCL12,https://www.doi.org/10.1364/OE.16.003242,10.1364/OE.16.003242,HS12,M12,GaAs/Al0.15Ga0.85As,LS12,9/79/25/66/41/156/33/90,Å,Resonantphonon,178,K,Continous Wave,none,,,none,,3,THz
+QCL13,https://www.doi.org/10.1063/1.2737129,10.1063/1.2737129,HS13,M13,GaAs/Al0.15Ga0.85As,LS13,3.9/14.0/ 0.6/ 9.1/ 0.6/16.0/ 1.5/12.8/ 1.8/12.2/2.0/12.0/ 2.0/ 11.4/ 2.7/11.3/ 3.5/ 11.6,nm,none,45,K,Continous Wave,none,,,100,mW,2.83,THz
+QCL14,https://www.doi.org/10.1063/1.2216112,10.1063/1.2216112,HS14,M14,GaAs/Al0.3Ga0.7As,LS14,31/93/14/82/23/175/11/105/14/85/20/175/17/105,Å,LOphonon,105,K,Continous Wave,138,K,Pulse Mode,none,,none,
+QCL15,https://www.doi.org/10.1063/1.5110305,10.1063/1.5110305,HS15,M15,GaAs/Al0.25Ga0.75As,LS15,32.6/79.9/19.0/84.0/29.0/51.6,Å,none,210.5,K,Continous Wave,none,,,200,mW,3.95,THz
