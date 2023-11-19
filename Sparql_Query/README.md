@@ -2,7 +2,7 @@
 
 [SPARQL Documentation](https://www.w3.org/TR/rdf-sparql-query/).
 
-CQ 1.1:
+CQ 1.1:  
 CQ 1.2:
 
 
