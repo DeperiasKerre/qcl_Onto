@@ -3,7 +3,7 @@
 [SPARQL Documentation](https://www.w3.org/TR/rdf-sparql-query/).
 
 CQ 2.1:
-"""
+```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> 
     SELECT ?HM ?seq ?unit ?ls
 WHERE
@@ -13,4 +13,4 @@ WHERE
   <http://qudt.org/schema/qudt/hasUnit> ?unit; 
   QpOnto:sequence ?seq
 }
-"""
+```
