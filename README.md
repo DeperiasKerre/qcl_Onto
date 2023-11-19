@@ -4,8 +4,8 @@
 * The ontological representation captures the laser design features, the performance/optoelectronic characteristics, the laser working mode and the equivalent provenance references for this information.
 ### Ontology Concepts and Relationships 
 ![entities](Figures/ontology_v1.png "Ontology Concepts and Relationships")
-### Citation
-TBD
+### Publication and Citation
+Comments:To be submitted for review to the Journal of Web Semantics.
 ### License
 This work is licensed under a [Creative Commons Attribution 4.0 International
 License](http://creativecommons.org/licenses/by/4.0/).
