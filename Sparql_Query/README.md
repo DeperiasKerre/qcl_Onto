@@ -2,6 +2,10 @@
 
 [SPARQL Documentation](https://www.w3.org/TR/rdf-sparql-query/).
 
+CQ 1.1:
+CQ 1.2:
+
+
 CQ 2.1:
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> 
