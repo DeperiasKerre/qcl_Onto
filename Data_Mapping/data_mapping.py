@@ -156,10 +156,10 @@ myGraph.add(((working_temperature), corresponds_to_working_mode, (continous_wave
 myGraph.add(((working_temperature), corresponds_to_working_mode, (pulsed_mode)))
 ##populating the graph dataset with data literals using data properties
 #populating doi, materials formula and the layer sequence
-for a,b,c,d,e in zip(df["PublicationURL"],df["MatID"],df["DOI"],df["Materials"],df["LayerSequence"]):
-    myGraph.add((URIRef(a), doi_prop, Literal(c)))
-    myGraph.add((URIRef(b), materials_prop, Literal(d)))
-    myGraph.add((URIRef(b), layerseq_prop, Literal(e)))
+for a,b,c,d,e,f in zip(df["PublicationURL"],df["MatID"],df["LSID"],df["DOI"],df["Materials"],df["LayerSequence"]):
+    myGraph.add((URIRef(a), doi_prop, Literal(d)))
+    myGraph.add((URIRef(b), materials_prop, Literal(e)))
+    myGraph.add((URIRef(c), layerseq_prop, Literal(f)))
 #populating numerical values for power, frequency and temperature
 for a,b,c,d in zip(df["WorkingTemperatureCW"],df["WTPulseMode"],df["Power"],df["Frequency"]):
         myGraph.add(((temp_value), numerical_value, Literal(a)))
