@@ -2,7 +2,7 @@
 
 [SPARQL Documentation](https://www.w3.org/TR/rdf-sparql-query/).
 
-The results of the queries below can be found in the notebook here:  Sparql_Query 
+The results of the queries below can be found in the notebook here:![entities](Sparql_Query/ontology_v1.png")  
 CQ 1.1:  
 CQ 1.2:
 
