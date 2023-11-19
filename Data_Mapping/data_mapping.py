@@ -74,6 +74,7 @@ doi_prop=URIRef(QpOnto+"DOI")
 materials_prop=URIRef(QpOnto+"matFormula")
 layerseq_prop=URIRef(QpOnto+"sequence")
 numerical_value=URIRef("https://qudt.org/schema/qudt/numericValue")
+publication_url=URIRef(QpOnto+"URL")
 #data enrichment with uris for the qcl, heterostructure, material, layer sequence, designtype and units.
 df["QID"]=df["QID"].apply(lambda q : QpOnto + q)
 df["HSID"]=df["HSID"].apply(lambda q : QpOnto + q)
@@ -160,6 +161,7 @@ for a,b,c,d,e,f in zip(df["PublicationURL"],df["MatID"],df["LSID"],df["DOI"],df[
     myGraph.add((URIRef(a), doi_prop, Literal(d)))
     myGraph.add((URIRef(b), materials_prop, Literal(e)))
     myGraph.add((URIRef(c), layerseq_prop, Literal(f)))
+    myGraph.add((URIRef(a), publication_url, Literal(a)))
 #populating numerical values for power, frequency and temperature
 for a,b,c,d in zip(df["WorkingTemperatureCW"],df["WTPulseMode"],df["Power"],df["Frequency"]):
         myGraph.add(((temp_value), numerical_value, Literal(a)))
