@@ -1,7 +1,7 @@
 ### SPARQL Queries for Competency Questions
 
 [SPARQL Documentation](https://www.w3.org/TR/rdf-sparql-query/).
-The competency questions can be found in a csv file [here] (https://github.com/DeperiasKerre/qcl_Onto/blob/main/Sparql_Query/Competency_Questions.csv).
+The competency questions can be found in a csv file [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Sparql_Query/Competency_Questions.csv).   
 The results of the queries below can be found in the notebook [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Sparql_Query/sparql_queriesv2.ipynb).     
 CQ 1.1: 
 ```
