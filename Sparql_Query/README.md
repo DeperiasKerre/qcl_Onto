@@ -2,7 +2,7 @@
 
 [SPARQL Documentation](https://www.w3.org/TR/rdf-sparql-query/).
 
-The results of the queries below can be found in the notebook here:
+The results of the queries below can be found in the notebook here:   
 CQ 1.1:  
 CQ 1.2:
 
