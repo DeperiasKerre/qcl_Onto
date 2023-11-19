@@ -40,3 +40,4 @@ WHERE
   QpOnto:sequence ?seq
 }
 ```
+CQ 3.1
