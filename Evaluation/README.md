@@ -1,4 +1,4 @@
-### SPARQL Queries for Competency Questions
+### SPARQL Queries for the Competency Questions
 
 The SPARQL documentation can be found [here](https://www.w3.org/TR/rdf-sparql-query/).      
 The competency questions can be found in a csv file [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Evaluation/Competency_Questions.csv).   
