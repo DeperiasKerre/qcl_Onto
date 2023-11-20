@@ -117,3 +117,34 @@ QpOnto:URL ?url.
 FILTER(?unit=<https://qudt.org/vocab/unit/K>&&?value>40).
 }
 ```
+CQ 5.2
+```
+PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX qudt:<https://qudt.org/schema/qudt/>
+    PREFIX prov:<http://www.w3.org/ns/prov#>
+    SELECT ?qcl ?article ?HS ?HM ?doi ?url
+WHERE
+{
+?qcl QpOnto:hasHeterostructure ?HS;
+prov:wasAttributedTo ?article.
+?HS QpOnto:hasMaterials ?HM.
+?HM QpOnto:matFormula "GaAs/Al0.15Ga0.85As".
+?article QpOnto:DOI ?doi;
+QpOnto:URL ?url.
+}
+```
+CQ 5.3
+```
+ PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX qudt:<https://qudt.org/schema/qudt/>
+    PREFIX prov:<http://www.w3.org/ns/prov#>
+    SELECT ?qcl ?article ?HS ?doi ?url
+WHERE
+{
+?qcl QpOnto:hasHeterostructure ?HS;
+prov:wasAttributedTo ?article.
+?HS QpOnto:hasDesignType QpOnto:LOPhononDepopulation.
+?article QpOnto:DOI ?doi;
+QpOnto:URL ?url.
+}
+```
