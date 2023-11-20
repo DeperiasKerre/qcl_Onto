@@ -53,3 +53,15 @@ WHERE
  qudt:hasUnit ?unit.
 }
 ```
+CQ 3.2
+```
+PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX qudt:<https://qudt.org/schema/qudt/>
+    SELECT ?wt ?qv ?value ?unit 
+WHERE
+{
+ ?wt QpOnto:correspondsToWorkingMode QpOnto:PulsedOperation;
+ <https://qudt.org/schema/qudt#hasQuantityValue> ?qv.
+ ?qv qudt:numericValue ?value;
+ qudt:hasUnit ?unit.
+```
