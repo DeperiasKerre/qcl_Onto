@@ -2,7 +2,7 @@
 
 The SPARQL documentation can be found [here](https://www.w3.org/TR/rdf-sparql-query/).      
 The competency questions can be found in a csv file [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Sparql_Query/Competency_Questions.csv).   
-The results of the queries below can be found in the notebook [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Sparql_Query/sparql_queriesv2.ipynb).     
+The results of the queries below can be found in the notebook [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Sparql_Query/sparql_queries.ipynb).     
 CQ 1.1: 
 ```
 PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> 
@@ -41,3 +41,15 @@ WHERE
 }
 ```
 CQ 3.1
+```
+REFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX qudt:<https://qudt.org/schema/qudt/>
+    SELECT ?wt ?qv ?value ?unit 
+WHERE
+{
+ ?wt QpOnto:correspondsToWorkingMode QpOnto:ContinousWaveOperation;
+ <https://qudt.org/schema/qudt#hasQuantityValue> ?qv.
+ ?qv qudt:numericValue ?value;
+ qudt:hasUnit ?unit.
+}
+```
