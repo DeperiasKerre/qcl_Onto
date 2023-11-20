@@ -80,6 +80,7 @@ WHERE
  qudt:hasUnit ?unit.
  FILTER(?unit=<https://qudt.org/vocab/unit/TeraHZ>).
 }
+```
 CQ 4.2
 ```
 PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
