@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Nov 16 13:44:53 2023
-Edited on Sunday Nov 19 09:46:48 2023
+Created on Mon Nov 20 11:38:04 2023
 
 @author: Deperias Kerre
 """
@@ -55,7 +54,7 @@ has_layersequence=URIRef(QpOnto+"hasLayerSequence")
 based_on_materials=URIRef(QpOnto+"basedOnMaterials")
 relates_to_heterostructure=URIRef(QpOnto+"relatesToHeterostructure")
 corresponds_to_working_mode=URIRef(QpOnto+"correspondsToWorkingMode")
-has_unit=URIRef("http://qudt.org/schema/qudt/hasUnit")
+has_unit=URIRef("https://qudt.org/schema/qudt/hasUnit")
 has_working_mode=URIRef(QpOnto+"hasWorkingMode")
 has_quantity_value=URIRef("https://qudt.org/schema/qudt#hasQuantityValue")
 #URIs for optolectronic Property Units
@@ -88,6 +87,14 @@ df["WTPMUnit"]=df["WTPMUnit"].apply(lambda q : Kelvin if q=="K" else "none")
 df["WorkingModepm"]=df["WorkingModepm"].apply(lambda q : pulsed_mode if q=="Pulse Mode" else "none")
 df["PowerUnit"]=df["PowerUnit"].apply(lambda q : Milliwatt if q=="mW" else "none")
 df["FrequencyUnit"]=df["FrequencyUnit"].apply(lambda q : TeraHertz if q=="THz" else "none")
+df["WTCWVID"]=df["WTCWVID"].apply(lambda q : "none" if q=="none" else QpOnto + q)
+df["WTPMVID"]=df["WTPMVID"].apply(lambda q : "none" if q=="none" else QpOnto + q)
+df["PVID"]=df["PVID"].apply(lambda q : "none" if q=="none" else QpOnto + q)
+df["FVID"]=df["FVID"].apply(lambda q : "none" if q=="none" else QpOnto + q)
+df["WTCWPID"]=df["WTCWPID"].apply(lambda q : "none" if q=="none" else QpOnto + q)
+df["WTPMPID"]=df["WTPMPID"].apply(lambda q : "none" if q=="none" else QpOnto + q)
+df["PPID"]=df["PPID"].apply(lambda q : "none" if q=="none" else QpOnto + q)
+df["FPID"]=df["FPID"].apply(lambda q : "none" if q=="none" else QpOnto + q)
 #enrichig with the design type URIs
 def designtype_mapper(a):
     if a=="LOphonon":
@@ -101,37 +108,80 @@ def designtype_mapper(a):
 df["DesignType"]=df["DesignType"].apply(lambda q : designtype_mapper(q))
 #Data mapping
 ##mapping instances
-##qcl id, publication url, hsid, matid, lsid, 
+##qcl id, publication url, hsid, matid, lsid 
 for a,b,c,d,e in zip (df["QID"],df["PublicationURL"],df["HSID"],df["MatID"],df["LSID"]):
-    if ("none" not in a and "none" not in b and "none" not in c and "none" not in d and "none" not in e):
-        myGraph.add((URIRef(a), RDF.type, (qcl)))
-        myGraph.add((URIRef(b), RDF.type, (academic_article)))
-        myGraph.add((URIRef(c), RDF.type, (heterostructure)))
-        myGraph.add((URIRef(d), RDF.type, (materials)))
-        myGraph.add((URIRef(e), RDF.type, (layer_sequence)))  
+    myGraph.add((URIRef(a), RDF.type, (qcl)))
+    myGraph.add((URIRef(b), RDF.type, (academic_article)))
+    myGraph.add((URIRef(c), RDF.type, (heterostructure)))
+    myGraph.add((URIRef(d), RDF.type, (materials)))
+    myGraph.add((URIRef(e), RDF.type, (layer_sequence)))  
 ##lsunit, wtcwunit, wtpmunit, power unit, frequency unit
-for a,b,c,d,e in zip (df["LSUnit"],df["WTCWUnit"],df["WTPMUnit"],df["PowerUnit"],df["FrequencyUnit"]):
-    if ("none" not in a and "none" not in b and "none" not in c and "none" not in d and "none" not in e):
+for a,b in zip(df["LSUnit"],df["WTCWUnit"]):
+    if("none" not in b):
         myGraph.add((URIRef(a), RDF.type, (unit)))
         myGraph.add((URIRef(b), RDF.type, (unit)))
-        myGraph.add((URIRef(c), RDF.type, (unit)))
-        myGraph.add((URIRef(d), RDF.type, (unit)))
-        myGraph.add((URIRef(e), RDF.type, (unit)))  
-## quantity kinds
+for a in zip (df["WTPMUnit"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (unit)))
+for a in zip(df["PowerUnit"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (unit)))
+for a in zip(df["FrequencyUnit"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (unit)))
+##quantity kinds
 myGraph.add(((power), RDF.type, (quantity_kind)))
 myGraph.add(((frequency), RDF.type, (quantity_kind)))
 myGraph.add(((temperature), RDF.type, (quantity_kind)))
+##quanity values
+for a in zip(df["WTCWVID"]):
+     if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (temp_value)))
+for a in zip(df["WTPMVID"]):
+     if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (temp_value)))
+for a in zip(df["PVID"]):
+     if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (power_value)))
+for a in zip(df["FVID"]):
+     if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (frequency_value)))
+## property
+for a in zip(df["WTCWPID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (working_temperature)))
+for a in zip(df["WTPMPID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (working_temperature)))      
+for a in zip(df["PPID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (optical_power))) 
+for a in zip(df["FPID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), RDF.type, (lasing_frequency))) 
 ##mapping object properties between instances: 
 ###has property, was attributed to, has heterostructure, has working mode
-for a,b,c,d,e in zip (df["QID"], df["HSID"], df["PublicationURL"], df["WorkingModeCW"], df["WorkingModepm"]):
-    if ("none" not in d and "none" not in e):
-        myGraph.add((URIRef(a), has_property, (optical_power)))
-        myGraph.add((URIRef(a), has_property, (lasing_frequency)))
-        myGraph.add((URIRef(a), has_property, (working_temperature)))
-        myGraph.add((URIRef(a), attributed_to, URIRef(c)))
-        myGraph.add((URIRef(a), has_heterostructure, URIRef(b)))
-        myGraph.add((URIRef(a), has_working_mode, URIRef(d)))
-        myGraph.add((URIRef(a), has_working_mode, URIRef(e)))
+for a,b,c in zip (df["QID"], df["HSID"], df["PublicationURL"]):
+    myGraph.add((URIRef(a), has_heterostructure, URIRef(b)))
+    myGraph.add((URIRef(a), attributed_to, URIRef(c)))
+for a,b in zip(df["QID"],df["WorkingModeCW"]):
+     if("none" not in b):
+             myGraph.add((URIRef(a), has_working_mode, URIRef(b)))
+for a,b in zip(df["QID"],df["WorkingModepm"]):
+     if("none" not in b):
+             myGraph.add((URIRef(a), has_working_mode, URIRef(b)))            
+for a,b in zip(df["QID"],df["WTCWPID"]):
+     if("none" not in b):
+             myGraph.add((URIRef(a), has_property, URIRef(b)))   
+for a,b in zip(df["QID"],df["WTPMPID"]):
+     if("none" not in b):
+             myGraph.add((URIRef(a), has_property, URIRef(b)))                   
+for a,b in zip(df["QID"],df["PPID"]):
+     if("none" not in b):
+             myGraph.add((URIRef(a), has_property, URIRef(b))) 
+for a,b in zip(df["QID"],df["FPID"]):
+     if("none" not in b):
+             myGraph.add((URIRef(a), has_property, URIRef(b)))
 ###has design type, has materials,has layer sequence,  based on materials, has unit, relates to heterostructure
 for a,b,c,d,e in zip(df["HSID"],df["DesignType"],df["LSID"],df["MatID"],df["LSUnit"]):
     if ("none" not in b):
@@ -140,22 +190,63 @@ for a,b,c,d,e in zip(df["HSID"],df["DesignType"],df["LSID"],df["MatID"],df["LSUn
         myGraph.add((URIRef(a), has_layersequence, URIRef(c)))
         myGraph.add((URIRef(c), based_on_materials, URIRef(d)))
         myGraph.add((URIRef(c), has_unit, URIRef(e)))
-        myGraph.add((URIRef(a), relates_to_heterostructure, working_temperature))
-        myGraph.add((URIRef(a), relates_to_heterostructure, optical_power))
-        myGraph.add((URIRef(a), relates_to_heterostructure, lasing_frequency))
+### relates to heterostructure
+for a,b in zip(df["WTCWPID"],df["HSID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), relates_to_heterostructure, URIRef(b)))
+for a,b in zip(df["WTPMPID"],df["HSID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), relates_to_heterostructure, URIRef(b)))  
+for a,b in zip(df["PPID"],df["HSID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), relates_to_heterostructure, URIRef(b)))
+for a,b in zip(df["FPID"],df["HSID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), relates_to_heterostructure, URIRef(b)))
 #has unit for quantity values
-myGraph.add((power_value, has_unit, Milliwatt))
-myGraph.add((temp_value, has_unit, Kelvin))
-myGraph.add((frequency_value, has_unit, TeraHertz))
+for a in (df["WTCWVID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a),  has_unit, (Kelvin)))
+for a in (df["WTPMVID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a),  has_unit, (Kelvin)))
+for a in (df["PVID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a),  has_unit, (Milliwatt)))
+for a in (df["FVID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a),  has_unit, (TeraHertz)))
 #has quantity kind, has quantity value, corresponds to working mode
-myGraph.add(((working_temperature), has_quantitykind, (temperature)))
-myGraph.add(((optical_power), has_quantitykind, (power)))
-myGraph.add(((lasing_frequency), has_quantitykind, (frequency)))
-myGraph.add(((working_temperature), has_quantity_value, (temp_value)))
-myGraph.add(((optical_power), has_quantity_value, (power_value)))
-myGraph.add(((lasing_frequency), has_quantity_value, (frequency_value)))
-myGraph.add(((working_temperature), corresponds_to_working_mode, (continous_wave)))
-myGraph.add(((working_temperature), corresponds_to_working_mode, (pulsed_mode)))
+for a in (df["WTCWPID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), has_quantitykind, (temperature)))
+for a in (df["WTPMPID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), has_quantitykind, (temperature)))
+for a in (df["PPID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), has_quantitykind, (power)))
+for a in (df["FPID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), has_quantitykind, (frequency)))
+for a,b in zip(df["WTCWPID"],df["WTCWVID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), has_quantity_value, URIRef(b)))
+for a,b in zip(df["WTPMPID"],df["WTPMVID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), has_quantity_value, URIRef(b)))
+for a,b in zip(df["PPID"],df["PVID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), has_quantity_value, URIRef(b)))
+for a,b in zip(df["FPID"],df["FVID"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), has_quantity_value, URIRef(b)))
+for a in (df["WTCWPID"]):
+    if ("none" not in a):
+         myGraph.add((URIRef(a), corresponds_to_working_mode, (continous_wave)))
+for a in (df["WTPMPID"]):
+    if ("none" not in a):
+         myGraph.add((URIRef(a), corresponds_to_working_mode, (pulsed_mode)))
 ##populating the graph dataset with data literals using data properties
 #populating doi, materials formula and the layer sequence
 for a,b,c,d,e,f in zip(df["PublicationURL"],df["MatID"],df["LSID"],df["DOI"],df["Materials"],df["LayerSequence"]):
@@ -164,10 +255,17 @@ for a,b,c,d,e,f in zip(df["PublicationURL"],df["MatID"],df["LSID"],df["DOI"],df[
     myGraph.add((URIRef(c), layerseq_prop, Literal(f)))
     myGraph.add((URIRef(a), publication_url, Literal(a)))
 #populating numerical values for power, frequency and temperature
-for a,b,c,d in zip(df["WorkingTemperatureCW"],df["WTPulseMode"],df["Power"],df["Frequency"]):
-        myGraph.add(((temp_value), numerical_value, Literal(a)))
-        myGraph.add(((temp_value), numerical_value, Literal(b)))
-        myGraph.add(((power_value), numerical_value, Literal(c)))
-        myGraph.add(((frequency_value), numerical_value, Literal(d)))
-#Generating the rdf graph dataset in turtle format
-myGraph.serialize(destination="data_file.ttl")
+for a,b in zip(df["WTCWVID"],df["WorkingTemperatureCW"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), numerical_value, Literal(b)))
+for a,b in zip(df["WTPMVID"],df["WTPulseMode"]):
+    if("none" not in a):
+        myGraph.add((URIRef(a), numerical_value, Literal(b)))        
+for a,b in zip(df["PVID"],df["Power"]):
+    if("none" not in a):
+         myGraph.add((URIRef(a), numerical_value, Literal(b)))
+for a,b in zip(df["FVID"],df["Frequency"]):
+    if("none" not in a):
+         myGraph.add((URIRef(a), numerical_value, Literal(b))) 
+#Generating the rdf graph dataset file in turtle format
+myGraph.serialize(destination="data_file.ttl")        
