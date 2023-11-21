@@ -5,8 +5,8 @@ The competency questions can be found in a csv file [here](https://github.com/De
 The results of the queries below can be found in the notebook [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Evaluation/sparql_queries.ipynb).     
 CQ 1.1: 
 ```
-PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> 
-    SELECT ?HS ?HM ?mat_composition
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> 
+    SELECT DISTINCT ?mat_composition
 WHERE
 {
  ?HS QpOnto:hasDesignType QpOnto:BoundToContinum.
@@ -16,9 +16,9 @@ WHERE
 ```
 CQ 1.2:
 ```
-PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
-    PREFIX qudt:<http://qudt.org/schema/qudt/>
-    SELECT ?HS ?ls ?seq ?unit
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX qudt:<https://qudt.org/schema/qudt/>
+    SELECT ?seq ?unit
 WHERE
 {
  ?HS QpOnto:hasDesignType QpOnto:LOPhononDepopulation;
@@ -30,8 +30,8 @@ WHERE
 CQ 2.1:
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> 
-    PREFIX qudt:<http://qudt.org/schema/qudt/>
-    SELECT ?HM ?seq ?unit ?ls
+    PREFIX qudt:<https://qudt.org/schema/qudt/>
+    SELECT ?seq ?unit
 WHERE
 {
  ?HM QpOnto:matFormula "GaAs/Al0.15Ga0.85As".
@@ -42,9 +42,9 @@ WHERE
 ```
 CQ 3.1
 ```
-REFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
-    SELECT ?wt ?qv ?value ?unit 
+    SELECT ?value ?unit 
 WHERE
 {
  ?wt QpOnto:correspondsToWorkingMode QpOnto:ContinousWaveOperation;
@@ -55,21 +55,22 @@ WHERE
 ```
 CQ 3.2
 ```
-PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
-    SELECT ?wt ?qv ?value ?unit 
+    SELECT ?value ?unit 
 WHERE
 {
  ?wt QpOnto:correspondsToWorkingMode QpOnto:PulsedOperation;
  <https://qudt.org/schema/qudt#hasQuantityValue> ?qv.
  ?qv qudt:numericValue ?value;
  qudt:hasUnit ?unit.
+}
 ```
 CQ 4.1
 ```
-PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
-    SELECT ?HS ?HM ?lf ?qv ?value ?unit
+    SELECT DISTINCT ?value ?unit
 WHERE
 {
  ?HM QpOnto:matFormula "GaAs/Al0.15Ga0.85As".
@@ -83,9 +84,9 @@ WHERE
 ```
 CQ 4.2
 ```
-PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
-    SELECT ?HS ?ls ?op ?qv ?value ?unit
+    SELECT ?value ?unit
 WHERE
 {
  ?HS QpOnto:hasLayerSequence ?ls.
@@ -100,10 +101,10 @@ WHERE
 ```
 CQ 5.1
 ```
-PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     PREFIX prov:<http://www.w3.org/ns/prov#>
-    SELECT ?qcl ?article ?wt ?qv ?value ?unit ?doi ?url
+    SELECT ?doi ?url
 WHERE
 {
 ?qcl QpOnto:hasProperty ?wt;
@@ -119,10 +120,10 @@ FILTER(?unit=<https://qudt.org/vocab/unit/K>&&?value>40).
 ```
 CQ 5.2
 ```
-PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     PREFIX prov:<http://www.w3.org/ns/prov#>
-    SELECT ?qcl ?article ?HS ?HM ?doi ?url
+    SELECT ?doi ?url
 WHERE
 {
 ?qcl QpOnto:hasHeterostructure ?HS;
@@ -135,10 +136,10 @@ QpOnto:URL ?url.
 ```
 CQ 5.3
 ```
- PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     PREFIX prov:<http://www.w3.org/ns/prov#>
-    SELECT ?qcl ?article ?HS ?doi ?url
+    SELECT ?doi ?url
 WHERE
 {
 ?qcl QpOnto:hasHeterostructure ?HS;
