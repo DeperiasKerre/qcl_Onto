@@ -12,8 +12,8 @@ CQ 1.1:
     SELECT DISTINCT ?mat_composition
 WHERE
 {
- ?HS QpOnto:hasDesignType QpOnto:BoundToContinum.
- ?HS QpOnto:hasMaterials ?HM.
+ ?HS QpOnto:hasDesignType QpOnto:BoundToContinum;
+     QpOnto:hasMaterials ?HM.
  ?HM QpOnto:matFormula ?mat_composition.
 }
 ```
