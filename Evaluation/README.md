@@ -1,4 +1,5 @@
 ### Ontology Evaluation 
+#### Consistency Check
 The consistency check report from OOPS! Scanner can be accessed [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Figures/OOPS_Report.png) or [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/OOPS_Scanner-Report.html).
 #### SPARQL Queries for the Competency Questions
 
