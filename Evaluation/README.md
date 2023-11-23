@@ -6,7 +6,7 @@ The consistency check report from OOPS! Scanner can be accessed [here](https://g
 The SPARQL documentation can be found [here](https://www.w3.org/TR/rdf-sparql-query/).      
 The competency questions can be found in a csv file [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Evaluation/Competency_Questions.csv).   
 The results of the queries below can be found in the notebook [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Evaluation/sparql_queries.ipynb) and the comparison with the actual data values [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Evaluation/query_results.csv).  
-The query statistics can be obtained by the file [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Evaluation/query_statistics.py). 
+The query statistics can be obtained by the file [here](https://github.com/DeperiasKerre/qcl_Onto/blob/main/Evaluation/query_statistics.py).    
 CQ 1.1: 
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> 
