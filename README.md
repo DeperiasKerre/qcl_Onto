@@ -1,4 +1,4 @@
-## An Ontological Modelling of Properties in the Quantum Cascade Laser Domain
+## An Ontological Model of Properties in the Quantum Cascade Laser Domain
 ### Introduction
 * We propose an ontological representation of heterostructure and optoelectronic characteristics in the quantum cascade laser domain. The main aim of the ontology is to modell the relationship between the quantum cascade laser design features (Heterostructure) and the laser optoelectronic characteristics i.e the performance features of the laser as a result of injection of current in the laser structure.
 * The ontological representation captures the laser design features, the performance/optoelectronic characteristics, the laser working mode and the equivalent provenance references for this information.
