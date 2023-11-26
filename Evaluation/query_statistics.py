@@ -2,7 +2,7 @@
 """
 Created on Thu Nov 23 11:18:20 2023
 
-@author: USER
+@author: Deperias Kerre
 """
 #import graph
 from rdflib import Graph
