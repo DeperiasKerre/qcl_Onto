@@ -1,7 +1,7 @@
 ﻿Competency Question ID,Competency Question
 CQ1.1,What is the possible heterostructure material composition(s) of a semi-conductor laser with a bound to continum design type?
 CQ1.2,What is the possible heterostructure layer sequence(s) of a semi-conductor laser with an LO Phonon design type?
-CQ2.1,What is the design type for a heterostructure with material composition X?
+CQ2.1,What is the design type for a heterostructure with material composition GaAs/Al0.15Ga0.85As?
 CQ3.1,What is the possible layer sequence(s) of a heterostructure with material composition GaAs/Al0.15Ga0.85As?
 CQ4.1,What are the operating temperatures of semiconductor laser devices working in a continous wave operation?
 CQ4.2,What are the operating temperatures of semiconductor laser devices working in a pulse mode operation?
