@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Nov 23 11:18:20 2023
+Created on Tue Nov 28 11:21:48 2023
 
 @author: Deperias Kerre
 """
@@ -43,6 +43,20 @@ for r in qpGraph.query(q2):
     b+=len(r)
 #query 2.1
 q3 = """
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    SELECT DISTINCT ?design_type
+WHERE
+{
+ ?HS QpOnto:hasDesignType ?design_type;
+ QpOnto:hasMaterials ?HM.
+ ?HM QpOnto:matFormula "GaAs/Al0.15Ga0.85As".
+}
+"""
+c=0
+for r in qpGraph.query(q3):
+    c+=len(r)
+#query 3.1
+q4 = """
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> 
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     SELECT ?seq ?unit
@@ -54,11 +68,11 @@ WHERE
   QpOnto:sequence ?seq
 }
 """
-c=0
-for r in qpGraph.query(q3):
-    c+=len(r)
-#Question 3.1
-q4 = """
+d=0
+for r in qpGraph.query(q4):
+    d+=len(r)
+#Question 4.1
+q5 = """
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     SELECT ?value ?unit 
@@ -70,11 +84,11 @@ WHERE
  qudt:hasUnit ?unit.
 }
 """
-d=0
-for r in qpGraph.query(q4):
-    d+=len(r)
-#question 3.2
-q5 = """
+e=0
+for r in qpGraph.query(q5):
+    e+=len(r)
+#question 4.2
+q6 = """
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     SELECT ?value ?unit 
@@ -86,11 +100,11 @@ WHERE
  qudt:hasUnit ?unit.
 }
 """
-e=0
-for r in qpGraph.query(q5):
-    e+=len(r)
-#question 4.1 
-q6 = """
+f=0
+for r in qpGraph.query(q6):
+    f+=len(r)
+#question 5.1 
+q7 = """
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     SELECT DISTINCT ?value ?unit
@@ -105,11 +119,11 @@ WHERE
  FILTER(?unit=<https://qudt.org/vocab/unit/TeraHZ>).
 }
 """
-f=0
-for r in qpGraph.query(q6):
-    f+=len(r)
-#question 4.2
-q7 = """
+g=0
+for r in qpGraph.query(q7):
+    g+=len(r)
+#question 5.2
+q8 = """
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     SELECT ?value ?unit
@@ -125,11 +139,30 @@ WHERE
  FILTER(?unit=<https://qudt.org/vocab/unit/MilliW>).
 }
 """
-g=0
-for r in qpGraph.query(q7):
-    g+=len(r)
-#question 5.1
-q8 = """
+h=0
+for r in qpGraph.query(q8):
+    h+=len(r)
+#question 6.1
+q9 = """
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX qudt:<https://qudt.org/schema/qudt/>
+    SELECT DISTINCT ?mat_composition
+WHERE
+{
+ ?lf <https://qudt.org/schema/qudt#hasQuantityValue> ?fv;
+ QpOnto:relatesToHeterostructure ?HS.
+ ?fv qudt:numericValue ?value;
+ qudt:hasUnit ?unit.
+ ?HS QpOnto:hasMaterials ?HM.
+ ?HM QpOnto:matFormula ?mat_composition.
+ FILTER(?unit=<https://qudt.org/vocab/unit/TeraHZ>&&?value>3).
+}
+"""
+i=0
+for r in qpGraph.query(q9):
+    i+=len(r)
+#question 7.1
+q10 = """
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     PREFIX prov:<http://www.w3.org/ns/prov#>
@@ -147,11 +180,11 @@ QpOnto:URL ?url.
 FILTER(?unit=<https://qudt.org/vocab/unit/K>&&?value>40).
 }
 """
-h=0
-for r in qpGraph.query(q8):
-    h+=len(r)
-#question 5.2
-q9 = """
+j=0
+for r in qpGraph.query(q10):
+    j+=len(r)
+#question 7.2
+q11 = """
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     PREFIX prov:<http://www.w3.org/ns/prov#>
@@ -166,11 +199,11 @@ prov:wasAttributedTo ?article.
 QpOnto:URL ?url.
 }
 """
-i=0
-for r in qpGraph.query(q9):
-    i+=len(r)
-#question 5.3
-q10 = """
+k=0
+for r in qpGraph.query(q11):
+    k+=len(r)
+#question 7.3
+q12 = """
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
     PREFIX prov:<http://www.w3.org/ns/prov#>
@@ -184,9 +217,9 @@ prov:wasAttributedTo ?article.
 QpOnto:URL ?url.
 }
 """
-j=0
-for r in qpGraph.query(q10):
-    j+=len(r)
+l=0
+for r in qpGraph.query(q12):
+    l+=len(r)
 #summary
 print("***Summary for the Records Returned by the Queries***")
 print("Records for queries for CQ1:")
@@ -194,10 +227,14 @@ print("CQ1.1", "number of records:", a,",", "CQ1.2", "number of records:", b)
 print("Records for queries for CQ2:")
 print("CQ2.1", "number of records:", c)
 print("Records for queries for CQ3:")
-print("CQ3.1", "number of records:", d,",", "CQ3.2", "number of records:", e)
+print("CQ3.1", "number of records:", d)
 print("Records for queries for CQ4:")
-print("CQ4.1", "number of records:", f,",", "CQ4.2", "number of records:", g)
+print("CQ4.1", "number of records:", e,",", "CQ4.2", "number of records:", f)
 print("Records for queries for CQ5:")
-print("CQ5.1", "number of records:", h,",", "CQ5.2", "number of records:", i,"CQ5.3", "number of records:", j)
-print("Total records:", a+b+c+d+e+f+g+h+i+j)
+print("CQ5.1", "number of records:", g,",", "CQ5.2", "number of records:", h)
+print("Records for queries for CQ6:")
+print("CQ6.1", "number of records:", i)
+print("Records for queries for CQ7:")
+print("CQ7.1", "number of records:", j, "CQ7.2", "number of records:", k, "CQ7.3", "number of records:", l)
+print("Total records:", a+b+c+d+e+f+g+h+i+j+k+l)
 print("**End of Report**")
