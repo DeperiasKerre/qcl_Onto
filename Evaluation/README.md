@@ -31,7 +31,17 @@ WHERE
   qudt:hasUnit ?unit 
 }
 ```
-CQ 2.1:
+CQ 2.1
+```
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    SELECT DISTINCT ?design_type
+WHERE
+{
+ ?HS QpOnto:hasDesignType ?design_type;
+ QpOnto:hasMaterials ?HM.
+ ?HM QpOnto:matFormula "GaAs/Al0.15Ga0.85As".
+```
+CQ 3.1:
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#> 
     PREFIX qudt:<https://qudt.org/schema/qudt/>
@@ -44,7 +54,7 @@ WHERE
   QpOnto:sequence ?seq
 }
 ```
-CQ 3.1
+CQ 4.1
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
@@ -57,7 +67,7 @@ WHERE
  qudt:hasUnit ?unit.
 }
 ```
-CQ 3.2
+CQ 4.2
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
@@ -70,7 +80,7 @@ WHERE
  qudt:hasUnit ?unit.
 }
 ```
-CQ 4.1
+CQ 5.1
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
@@ -86,7 +96,7 @@ WHERE
  FILTER(?unit=<https://qudt.org/vocab/unit/TeraHZ>).
 }
 ```
-CQ 4.2
+CQ 5.2
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
@@ -103,7 +113,23 @@ WHERE
  FILTER(?unit=<https://qudt.org/vocab/unit/MilliW>).
 }
 ```
-CQ 5.1
+CQ 6.1
+```
+    PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
+    PREFIX qudt:<https://qudt.org/schema/qudt/>
+    SELECT DISTINCT ?mat_composition
+WHERE
+{
+ ?lf <https://qudt.org/schema/qudt#hasQuantityValue> ?fv;
+ QpOnto:relatesToHeterostructure ?HS.
+ ?fv qudt:numericValue ?value;
+ qudt:hasUnit ?unit.
+ ?HS QpOnto:hasMaterials ?HM.
+ ?HM QpOnto:matFormula ?mat_composition.
+ FILTER(?unit=<https://qudt.org/vocab/unit/TeraHZ>&&?value>3).
+}
+```
+CQ 7.1
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
@@ -122,7 +148,7 @@ QpOnto:URL ?url.
 FILTER(?unit=<https://qudt.org/vocab/unit/K>&&?value>40).
 }
 ```
-CQ 5.2
+CQ 7.2
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
@@ -138,7 +164,7 @@ prov:wasAttributedTo ?article.
 QpOnto:URL ?url.
 }
 ```
-CQ 5.3
+CQ 7.3
 ```
     PREFIX QpOnto:<https://github.com/DeperiasKerre/qcl_Onto/blob/main/qclontology/version-1.0/qclonto.owl#>
     PREFIX qudt:<https://qudt.org/schema/qudt/>
