@@ -120,13 +120,13 @@ for a,b in zip(df["LSUnit"],df["WTCWUnit"]):
     if("none" not in b):
         myGraph.add((URIRef(a), RDF.type, (unit)))
         myGraph.add((URIRef(b), RDF.type, (unit)))
-for a in zip (df["WTPMUnit"]):
+for a in (df["WTPMUnit"]):
     if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (unit)))
-for a in zip(df["PowerUnit"]):
+for a in (df["PowerUnit"]):
     if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (unit)))
-for a in zip(df["FrequencyUnit"]):
+for a in (df["FrequencyUnit"]):
     if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (unit)))
 ##quantity kinds
@@ -134,29 +134,29 @@ myGraph.add(((power), RDF.type, (quantity_kind)))
 myGraph.add(((frequency), RDF.type, (quantity_kind)))
 myGraph.add(((temperature), RDF.type, (quantity_kind)))
 ##quanity values
-for a in zip(df["WTCWVID"]):
+for a in (df["WTCWVID"]):
      if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (temp_value)))
-for a in zip(df["WTPMVID"]):
+for a in (df["WTPMVID"]):
      if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (temp_value)))
-for a in zip(df["PVID"]):
+for a in (df["PVID"]):
      if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (power_value)))
-for a in zip(df["FVID"]):
+for a in (df["FVID"]):
      if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (frequency_value)))
 ## property
-for a in zip(df["WTCWPID"]):
+for a in (df["WTCWPID"]):
     if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (working_temperature)))
-for a in zip(df["WTPMPID"]):
+for a in (df["WTPMPID"]):
     if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (working_temperature)))      
-for a in zip(df["PPID"]):
+for a in (df["PPID"]):
     if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (optical_power))) 
-for a in zip(df["FPID"]):
+for a in (df["FPID"]):
     if("none" not in a):
         myGraph.add((URIRef(a), RDF.type, (lasing_frequency))) 
 ##mapping object properties between instances: 
