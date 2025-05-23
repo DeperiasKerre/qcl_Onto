@@ -5,7 +5,7 @@
 ### Ontology Concepts and Relations
 ![entities](Figures/ontology_v1.png "Ontology Concepts and Relationships")
 ### Publication and Citation
-Comments:under review.
+Accepted at the Semantic Web Journal. Publication in Progress.
 ### License
 This work is licensed under a [Creative Commons Attribution 4.0 International
 License](http://creativecommons.org/licenses/by/4.0/).
