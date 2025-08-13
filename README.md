@@ -5,7 +5,7 @@
 ### Ontology Concepts and Relations
 ![entities](Figures/ontology_v1.png "Ontology Concepts and Relationships")
 ### Publication and Citation
-Accepted at the Semantic Web Journal. Publication in Progress.
+Kerre, D., Laurent, A., Maussang, K., & Owuor, D. (2025). A Concise Ontological Model of the Design and Optoelectronic Properties in the Quantum Cascade Laser Domain. Semantic Web, 16 (4), 1-17. [DOI:10.1177/22104968251359870](https://doi.org/10.1177/22104968251359870)
 ### License
 This work is licensed under a [Creative Commons Attribution 4.0 International
 License](http://creativecommons.org/licenses/by/4.0/).
